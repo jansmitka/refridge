@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:refridge/src/domain/extensions/int_extension.dart';
 import 'package:refridge/src/domain/models/firebase_collections.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
