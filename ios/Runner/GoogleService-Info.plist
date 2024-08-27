@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>674812189821-l9juhof84knghri2g7cb8etkhr1s1umq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.674812189821-l9juhof84knghri2g7cb8etkhr1s1umq</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>674812189821-7psci58fm86dto5qt0m8i63l175rbgpi.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBGX_KuDeGs9UrC_m6OGP4I7tJaUV5nawE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>674812189821</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.refridge.refridge</string>
+	<key>PROJECT_ID</key>
+	<string>refridge-5c43a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>refridge-5c43a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:674812189821:ios:6c3fcd92ca3e0c724c2514</string>
+</dict>
+</plist>

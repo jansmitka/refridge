@@ -1,0 +1,4 @@
+enum SectionDisplayType {
+  list,
+  grid,
+}
