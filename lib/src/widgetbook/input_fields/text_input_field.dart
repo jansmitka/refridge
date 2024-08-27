@@ -5,7 +5,7 @@ import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
 class RFInputField extends StatefulWidget {
   final TextEditingController controller;
   final String label;
-  final IconData icon;
+  final IconData? icon;
   final bool showSuffixVisible;
   final String? Function(String?)? validator;
   final Function(String)? onChanged;
@@ -16,7 +16,7 @@ class RFInputField extends StatefulWidget {
     super.key,
     required this.controller,
     required this.label,
-    required this.icon,
+    this.icon,
     this.showSuffixVisible = false,
     this.validator,
     this.onChanged,

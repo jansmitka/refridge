@@ -88,7 +88,9 @@
     "add_to_fridge_screen_title" : "Add to my Fridge",
     "add_to_fridge_screen_section_title" : "What to add",
 
-
+    "add_item_to_fridge_bottom_title" : "Add Item",
+    "add_item_to_fridge_bottom_expiration" : "Expiration date",
+    "add_item_to_fridge_bottom_add" : "Add",
 
     
     "grocery_apple": "Apple",

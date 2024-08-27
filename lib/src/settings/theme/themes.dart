@@ -18,4 +18,14 @@ final lightTheme = ThemeData(
     labelSmall: RFTextStyles.label2,
     titleMedium: RFTextStyles.section1,
   ),
+  sliderTheme: SliderThemeData(
+    activeTrackColor: RFColors.secondaryColor,
+    inactiveTrackColor: RFColors.greySecondary,
+    thumbColor: RFColors.primaryColor,
+    thumbShape: const RoundSliderThumbShape(
+      enabledThumbRadius: 10,
+    ),
+    overlayColor: RFColors.primaryColor.withOpacity(0.2),
+    trackHeight: 8.0,
+  ),
 );

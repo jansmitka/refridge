@@ -6,5 +6,7 @@ class AddToFridgeState with _$AddToFridgeState {
     @Default(false) bool isLoading,
     @Default(false) bool isError,
     Fridge? selectedFridge,
+    @Default([]) List<Grocery> selectedGroceries,
+    @Default([]) List<GroceryTemplate> searchedGroceries,
   }) = _AddToFridgeState;
 }
