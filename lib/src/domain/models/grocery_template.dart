@@ -68,7 +68,7 @@ class GroceryTemplate {
   const GroceryTemplate({
     required this.id,
     required this.label,
-    this.imgPath = RFImages.milkBottled,
+    this.imgPath = RFImages.milk,
     this.defaultType = GroceryType.solid,
     this.defaultUnit = GroceryUnits.ml,
   });
@@ -824,5 +824,35 @@ class GroceryTemplate {
         label: 'Kitty Litter',
         defaultType: GroceryType.solid,
         defaultUnit: GroceryUnits.kg),
+    GroceryTemplate(
+        id: '143',
+        label: 'Ham',
+        defaultType: GroceryType.solid,
+        defaultUnit: GroceryUnits.g),
+    GroceryTemplate(
+        id: '144',
+        label: 'Tartar Sauce',
+        defaultType: GroceryType.solid,
+        defaultUnit: GroceryUnits.ml),
+    GroceryTemplate(
+        id: '145',
+        label: 'Cheddar Cheese',
+        defaultType: GroceryType.solid,
+        defaultUnit: GroceryUnits.g),
+    GroceryTemplate(
+        id: '146',
+        label: 'Mozzarella Cheese',
+        defaultType: GroceryType.solid,
+        defaultUnit: GroceryUnits.g),
+    GroceryTemplate(
+        id: '147',
+        label: 'Swiss Cheese',
+        defaultType: GroceryType.solid,
+        defaultUnit: GroceryUnits.g),
+    GroceryTemplate(
+        id: '148',
+        label: 'Feta Cheese',
+        defaultType: GroceryType.solid,
+        defaultUnit: GroceryUnits.g),
   ];
 }

@@ -20,7 +20,7 @@ mixin _$AddToFridgeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(Fridge selectedFridge) init,
     required TResult Function(Fridge selectedFridge) changeFridge,
-    required TResult Function(GroceryTemplate grocery) addGrocery,
+    required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(BuildContext context, String input) searchGrocery,
     required TResult Function() addToFridge,
   }) =>
@@ -29,7 +29,7 @@ mixin _$AddToFridgeEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Fridge selectedFridge)? init,
     TResult? Function(Fridge selectedFridge)? changeFridge,
-    TResult? Function(GroceryTemplate grocery)? addGrocery,
+    TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(BuildContext context, String input)? searchGrocery,
     TResult? Function()? addToFridge,
   }) =>
@@ -38,7 +38,7 @@ mixin _$AddToFridgeEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Fridge selectedFridge)? init,
     TResult Function(Fridge selectedFridge)? changeFridge,
-    TResult Function(GroceryTemplate grocery)? addGrocery,
+    TResult Function(Grocery grocery)? addGrocery,
     TResult Function(BuildContext context, String input)? searchGrocery,
     TResult Function()? addToFridge,
     required TResult orElse(),
@@ -177,7 +177,7 @@ class _$InitImpl implements _Init {
   TResult when<TResult extends Object?>({
     required TResult Function(Fridge selectedFridge) init,
     required TResult Function(Fridge selectedFridge) changeFridge,
-    required TResult Function(GroceryTemplate grocery) addGrocery,
+    required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(BuildContext context, String input) searchGrocery,
     required TResult Function() addToFridge,
   }) {
@@ -189,7 +189,7 @@ class _$InitImpl implements _Init {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Fridge selectedFridge)? init,
     TResult? Function(Fridge selectedFridge)? changeFridge,
-    TResult? Function(GroceryTemplate grocery)? addGrocery,
+    TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(BuildContext context, String input)? searchGrocery,
     TResult? Function()? addToFridge,
   }) {
@@ -201,7 +201,7 @@ class _$InitImpl implements _Init {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Fridge selectedFridge)? init,
     TResult Function(Fridge selectedFridge)? changeFridge,
-    TResult Function(GroceryTemplate grocery)? addGrocery,
+    TResult Function(Grocery grocery)? addGrocery,
     TResult Function(BuildContext context, String input)? searchGrocery,
     TResult Function()? addToFridge,
     required TResult orElse(),
@@ -348,7 +348,7 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
   TResult when<TResult extends Object?>({
     required TResult Function(Fridge selectedFridge) init,
     required TResult Function(Fridge selectedFridge) changeFridge,
-    required TResult Function(GroceryTemplate grocery) addGrocery,
+    required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(BuildContext context, String input) searchGrocery,
     required TResult Function() addToFridge,
   }) {
@@ -360,7 +360,7 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Fridge selectedFridge)? init,
     TResult? Function(Fridge selectedFridge)? changeFridge,
-    TResult? Function(GroceryTemplate grocery)? addGrocery,
+    TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(BuildContext context, String input)? searchGrocery,
     TResult? Function()? addToFridge,
   }) {
@@ -372,7 +372,7 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Fridge selectedFridge)? init,
     TResult Function(Fridge selectedFridge)? changeFridge,
-    TResult Function(GroceryTemplate grocery)? addGrocery,
+    TResult Function(Grocery grocery)? addGrocery,
     TResult Function(BuildContext context, String input)? searchGrocery,
     TResult Function()? addToFridge,
     required TResult orElse(),
@@ -442,7 +442,9 @@ abstract class _$$AddGroceryImplCopyWith<$Res> {
           _$AddGroceryImpl value, $Res Function(_$AddGroceryImpl) then) =
       __$$AddGroceryImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({GroceryTemplate grocery});
+  $Res call({Grocery grocery});
+
+  $GroceryCopyWith<$Res> get grocery;
 }
 
 /// @nodoc
@@ -464,8 +466,18 @@ class __$$AddGroceryImplCopyWithImpl<$Res>
       null == grocery
           ? _value.grocery
           : grocery // ignore: cast_nullable_to_non_nullable
-              as GroceryTemplate,
+              as Grocery,
     ));
+  }
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $GroceryCopyWith<$Res> get grocery {
+    return $GroceryCopyWith<$Res>(_value.grocery, (value) {
+      return _then(_value.copyWith(grocery: value));
+    });
   }
 }
 
@@ -475,7 +487,7 @@ class _$AddGroceryImpl implements _AddGrocery {
   const _$AddGroceryImpl(this.grocery);
 
   @override
-  final GroceryTemplate grocery;
+  final Grocery grocery;
 
   @override
   String toString() {
@@ -506,7 +518,7 @@ class _$AddGroceryImpl implements _AddGrocery {
   TResult when<TResult extends Object?>({
     required TResult Function(Fridge selectedFridge) init,
     required TResult Function(Fridge selectedFridge) changeFridge,
-    required TResult Function(GroceryTemplate grocery) addGrocery,
+    required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(BuildContext context, String input) searchGrocery,
     required TResult Function() addToFridge,
   }) {
@@ -518,7 +530,7 @@ class _$AddGroceryImpl implements _AddGrocery {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Fridge selectedFridge)? init,
     TResult? Function(Fridge selectedFridge)? changeFridge,
-    TResult? Function(GroceryTemplate grocery)? addGrocery,
+    TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(BuildContext context, String input)? searchGrocery,
     TResult? Function()? addToFridge,
   }) {
@@ -530,7 +542,7 @@ class _$AddGroceryImpl implements _AddGrocery {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Fridge selectedFridge)? init,
     TResult Function(Fridge selectedFridge)? changeFridge,
-    TResult Function(GroceryTemplate grocery)? addGrocery,
+    TResult Function(Grocery grocery)? addGrocery,
     TResult Function(BuildContext context, String input)? searchGrocery,
     TResult Function()? addToFridge,
     required TResult orElse(),
@@ -583,9 +595,9 @@ class _$AddGroceryImpl implements _AddGrocery {
 }
 
 abstract class _AddGrocery implements AddToFridgeEvent {
-  const factory _AddGrocery(final GroceryTemplate grocery) = _$AddGroceryImpl;
+  const factory _AddGrocery(final Grocery grocery) = _$AddGroceryImpl;
 
-  GroceryTemplate get grocery;
+  Grocery get grocery;
 
   /// Create a copy of AddToFridgeEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -672,7 +684,7 @@ class _$SearchGroceryImpl implements _SearchGrocery {
   TResult when<TResult extends Object?>({
     required TResult Function(Fridge selectedFridge) init,
     required TResult Function(Fridge selectedFridge) changeFridge,
-    required TResult Function(GroceryTemplate grocery) addGrocery,
+    required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(BuildContext context, String input) searchGrocery,
     required TResult Function() addToFridge,
   }) {
@@ -684,7 +696,7 @@ class _$SearchGroceryImpl implements _SearchGrocery {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Fridge selectedFridge)? init,
     TResult? Function(Fridge selectedFridge)? changeFridge,
-    TResult? Function(GroceryTemplate grocery)? addGrocery,
+    TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(BuildContext context, String input)? searchGrocery,
     TResult? Function()? addToFridge,
   }) {
@@ -696,7 +708,7 @@ class _$SearchGroceryImpl implements _SearchGrocery {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Fridge selectedFridge)? init,
     TResult Function(Fridge selectedFridge)? changeFridge,
-    TResult Function(GroceryTemplate grocery)? addGrocery,
+    TResult Function(Grocery grocery)? addGrocery,
     TResult Function(BuildContext context, String input)? searchGrocery,
     TResult Function()? addToFridge,
     required TResult orElse(),
@@ -805,7 +817,7 @@ class _$AddToFridgeImpl implements _AddToFridge {
   TResult when<TResult extends Object?>({
     required TResult Function(Fridge selectedFridge) init,
     required TResult Function(Fridge selectedFridge) changeFridge,
-    required TResult Function(GroceryTemplate grocery) addGrocery,
+    required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(BuildContext context, String input) searchGrocery,
     required TResult Function() addToFridge,
   }) {
@@ -817,7 +829,7 @@ class _$AddToFridgeImpl implements _AddToFridge {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Fridge selectedFridge)? init,
     TResult? Function(Fridge selectedFridge)? changeFridge,
-    TResult? Function(GroceryTemplate grocery)? addGrocery,
+    TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(BuildContext context, String input)? searchGrocery,
     TResult? Function()? addToFridge,
   }) {
@@ -829,7 +841,7 @@ class _$AddToFridgeImpl implements _AddToFridge {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Fridge selectedFridge)? init,
     TResult Function(Fridge selectedFridge)? changeFridge,
-    TResult Function(GroceryTemplate grocery)? addGrocery,
+    TResult Function(Grocery grocery)? addGrocery,
     TResult Function(BuildContext context, String input)? searchGrocery,
     TResult Function()? addToFridge,
     required TResult orElse(),

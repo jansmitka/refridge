@@ -22,7 +22,7 @@ Future<T?> showRFBottomSheet<T>({
         ),
       ),
       constraints: BoxConstraints(
-        maxHeight: MediaQuery.of(context).size.height - 44,
+        maxHeight: MediaQuery.sizeOf(context).height - 40,
       ),
       context: context,
       builder: (context) {

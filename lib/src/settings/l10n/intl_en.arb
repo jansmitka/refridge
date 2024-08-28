@@ -234,6 +234,12 @@
     "grocery_dog_food": "Dog Food",
     "grocery_cat_food": "Cat Food",
     "grocery_pet_treats": "Pet Treats",
-    "grocery_kitty_litter": "Kitty Litter"
+    "grocery_kitty_litter": "Kitty Litter",
+    "grocery_ham": "Ham",
+    "grocery_tartar_sauce": "Tartar Sauce",
+    "grocery_cheddar_cheese": "Cheddar Cheese",
+    "grocery_mozzarella_cheese": "Mozzarella Cheese",
+    "grocery_swiss_cheese": "Swiss Cheese",
+    "grocery_feta_cheese": "Feta Cheese"
 
 }
