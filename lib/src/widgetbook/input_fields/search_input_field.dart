@@ -48,6 +48,7 @@ class _RFSearchFieldState extends State<RFSearchField> {
     setState(() {
       widget.controller.clear();
       _showSuffix = false;
+      FocusScope.of(context).unfocus();
       widget.onChanged('');
     });
   }

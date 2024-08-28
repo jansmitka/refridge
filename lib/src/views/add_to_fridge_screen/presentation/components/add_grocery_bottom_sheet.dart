@@ -10,8 +10,8 @@ import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AddGroceryBottomSheet extends StatefulWidget {
-  Grocery grocery;
-  AddGroceryBottomSheet({
+  final Grocery grocery;
+  const AddGroceryBottomSheet({
     super.key,
     required this.grocery,
   });
@@ -26,7 +26,15 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
   int _selectedAmountL = 1;
   double _selectedAmountG = 500.0;
   double _selectedAmountMl = 500.0;
-  DateTime? _expirationDate = null;
+  DateTime? _expirationDate;
+
+  GroceryUnits _selectedUnit = GroceryUnits.kg;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedUnit = widget.grocery.unit!;
+  }
 
   void amountIncrease() {
     setState(() {
@@ -87,7 +95,7 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
 
   void setGroceryUnit(GroceryUnits unit) async {
     setState(() {
-      widget.grocery = widget.grocery.copyWith(unit: unit);
+      _selectedUnit = unit;
     });
   }
 
@@ -101,20 +109,20 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
           style: Theme.of(context).textTheme.headlineMedium!,
         ),
         UnitSelector(
-          selectedUnit: widget.grocery.unit!,
+          selectedUnit: _selectedUnit,
           onTap: setGroceryUnit,
         ),
-        if (widget.grocery.unit == GroceryUnits.pcs ||
-            widget.grocery.unit == GroceryUnits.kg ||
-            widget.grocery.unit == GroceryUnits.l)
+        if (_selectedUnit == GroceryUnits.pcs ||
+            _selectedUnit == GroceryUnits.kg ||
+            _selectedUnit == GroceryUnits.l)
           RFPadding.normalVertical(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 AmountIncreaseField(
-                  amount: widget.grocery.unit == GroceryUnits.pcs
+                  amount: _selectedUnit == GroceryUnits.pcs
                       ? _selectedAmountPcs
-                      : widget.grocery.unit == GroceryUnits.kg
+                      : _selectedUnit == GroceryUnits.kg
                           ? _selectedAmountKg
                           : _selectedAmountL,
                   onIncrease: amountIncrease,
@@ -124,22 +132,24 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
                   width: 8,
                 ),
                 Text(
-                  widget.grocery.unit!.getLabel(context),
+                  _selectedUnit.getLabel(context),
                   style: Theme.of(context).textTheme.bodyLarge!,
                 )
               ],
             ),
           ),
-        if (widget.grocery.unit == GroceryUnits.ml ||
-            widget.grocery.unit == GroceryUnits.g)
+        if (_selectedUnit == GroceryUnits.ml || _selectedUnit == GroceryUnits.g)
           RFPadding.normalVertical(
             child: Column(
               children: [
-                Text(widget.grocery.unit == GroceryUnits.ml
-                    ? "$_selectedAmountMl ${widget.grocery.unit!.getLabel(context)}"
-                    : "$_selectedAmountG ${widget.grocery.unit!.getLabel(context)}"),
+                Text(
+                  _selectedUnit == GroceryUnits.ml
+                      ? "$_selectedAmountMl ${_selectedUnit.getLabel(context)}"
+                      : "$_selectedAmountG ${_selectedUnit.getLabel(context)}",
+                  style: Theme.of(context).textTheme.bodyLarge!,
+                ),
                 Slider(
-                  value: widget.grocery.unit == GroceryUnits.ml
+                  value: _selectedUnit == GroceryUnits.ml
                       ? _selectedAmountMl
                       : _selectedAmountG,
                   min: 0.0,
@@ -151,13 +161,40 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
             ),
           ),
         RFDatePicker(
-          hint: 'Expiration date',
+          hint: AppLocalizations.of(context)!
+              .add_item_to_fridge_bottom_expiration,
+          date: _expirationDate,
           onChanged: onExpirationChanged,
         ),
         RFPadding.normalAll(
           child: PrimaryTextButton(
             lable: AppLocalizations.of(context)!.add_item_to_fridge_bottom_add,
-            onTap: () {},
+            onTap: () {
+              double amount = 0;
+              switch (_selectedUnit) {
+                case GroceryUnits.g:
+                  amount = _selectedAmountG;
+                  break;
+                case GroceryUnits.kg:
+                  amount = _selectedAmountKg.toDouble();
+                  break;
+                case GroceryUnits.l:
+                  amount = _selectedAmountL.toDouble();
+                  break;
+                case GroceryUnits.ml:
+                  amount = _selectedAmountMl;
+                  break;
+                case GroceryUnits.pcs:
+                  amount = _selectedAmountPcs.toDouble();
+                  break;
+              }
+              final grocery = widget.grocery.copyWith(
+                unit: _selectedUnit,
+                amount: amount,
+                expirationDate: _expirationDate,
+              );
+              Navigator.pop(context, grocery);
+            },
           ),
         ),
       ],

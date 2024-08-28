@@ -233,5 +233,11 @@
     "grocery_dog_food": "Psí žrádlo",
     "grocery_cat_food": "Kočičí žrádlo",
     "grocery_pet_treats": "Pamlsky pro zvířata",
-    "grocery_kitty_litter": "Kočičí stelivo"
+    "grocery_kitty_litter": "Kočičí stelivo",
+    "grocery_ham": "Šunka",
+    "grocery_tartar_sauce": "Tatarská omáčka",
+    "grocery_cheddar_cheese": "Cheddar sýr",
+    "grocery_mozzarella_cheese": "Mozzarella sýr",
+    "grocery_swiss_cheese": "Švýcarský sýr",
+    "grocery_feta_cheese": "Feta sýr"
 }

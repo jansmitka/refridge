@@ -31,6 +31,17 @@ class AddToFridgeBloc extends Bloc<AddToFridgeEvent, AddToFridgeState> {
         ),
       );
     });
+    on<_AddGrocery>((event, emit) {
+      final updatedGroceries = List<Grocery>.from(state.selectedGroceries)
+        ..add(event.grocery);
+      emit(
+        state.copyWith(
+          isLoading: false,
+          isError: false,
+          selectedGroceries: updatedGroceries,
+        ),
+      );
+    });
     on<_SearchGrocery>((event, emit) {
       if (event.input.isNotEmpty) {
         emit(
