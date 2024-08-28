@@ -78,6 +78,9 @@ class _$AccountEventCopyWithImpl<$Res, $Val extends AccountEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -98,6 +101,8 @@ class __$$InitImplCopyWithImpl<$Res>
   __$$InitImplCopyWithImpl(_$InitImpl _value, $Res Function(_$InitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,6 +116,8 @@ class __$$InitImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RFUserCopyWith<$Res>? get user {
@@ -148,7 +155,9 @@ class _$InitImpl implements _Init {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InitImplCopyWith<_$InitImpl> get copyWith =>
@@ -227,7 +236,10 @@ abstract class _Init implements AccountEvent {
   const factory _Init(final RFUser? user) = _$InitImpl;
 
   RFUser? get user;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InitImplCopyWith<_$InitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -249,6 +261,8 @@ class __$$SaveUserProfileImgImplCopyWithImpl<$Res>
       $Res Function(_$SaveUserProfileImgImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -287,7 +301,9 @@ class _$SaveUserProfileImgImpl implements _SaveUserProfileImg {
   @override
   int get hashCode => Object.hash(runtimeType, image);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SaveUserProfileImgImplCopyWith<_$SaveUserProfileImgImpl> get copyWith =>
@@ -368,7 +384,10 @@ abstract class _SaveUserProfileImg implements AccountEvent {
       _$SaveUserProfileImgImpl;
 
   XFile get image;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SaveUserProfileImgImplCopyWith<_$SaveUserProfileImgImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -390,6 +409,8 @@ class __$$UpdateUserProfileImgImplCopyWithImpl<$Res>
       $Res Function(_$UpdateUserProfileImgImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -429,7 +450,9 @@ class _$UpdateUserProfileImgImpl implements _UpdateUserProfileImg {
   @override
   int get hashCode => Object.hash(runtimeType, imageUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateUserProfileImgImplCopyWith<_$UpdateUserProfileImgImpl>
@@ -511,7 +534,10 @@ abstract class _UpdateUserProfileImg implements AccountEvent {
       _$UpdateUserProfileImgImpl;
 
   String get imageUrl;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AccountEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateUserProfileImgImplCopyWith<_$UpdateUserProfileImgImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -523,7 +549,9 @@ mixin _$AccountState {
   RFUser? get user => throw _privateConstructorUsedError;
   String? get imageURL => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AccountStateCopyWith<AccountState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -549,6 +577,8 @@ class _$AccountStateCopyWithImpl<$Res, $Val extends AccountState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AccountState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -577,6 +607,8 @@ class _$AccountStateCopyWithImpl<$Res, $Val extends AccountState>
     ) as $Val);
   }
 
+  /// Create a copy of AccountState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RFUserCopyWith<$Res>? get user {
@@ -612,6 +644,8 @@ class __$$AccountStateImplCopyWithImpl<$Res>
       _$AccountStateImpl _value, $Res Function(_$AccountStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AccountState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -680,7 +714,9 @@ class _$AccountStateImpl implements _AccountState {
   int get hashCode =>
       Object.hash(runtimeType, isLoading, isError, user, imageURL);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AccountStateImplCopyWith<_$AccountStateImpl> get copyWith =>
@@ -702,8 +738,11 @@ abstract class _AccountState implements AccountState {
   RFUser? get user;
   @override
   String? get imageURL;
+
+  /// Create a copy of AccountState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AccountStateImplCopyWith<_$AccountStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

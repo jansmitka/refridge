@@ -85,6 +85,9 @@ class _$FridgeManagementEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -105,6 +108,8 @@ class __$$InitImplCopyWithImpl<$Res>
   __$$InitImplCopyWithImpl(_$InitImpl _value, $Res Function(_$InitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,6 +123,8 @@ class __$$InitImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RFUserCopyWith<$Res> get user {
@@ -151,7 +158,9 @@ class _$InitImpl implements _Init {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InitImplCopyWith<_$InitImpl> get copyWith =>
@@ -236,7 +245,10 @@ abstract class _Init implements FridgeManagementEvent {
   const factory _Init(final RFUser user) = _$InitImpl;
 
   RFUser get user;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InitImplCopyWith<_$InitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -255,6 +267,9 @@ class __$$FetchFridgeDataImplCopyWithImpl<$Res>
   __$$FetchFridgeDataImplCopyWithImpl(
       _$FetchFridgeDataImpl _value, $Res Function(_$FetchFridgeDataImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -372,6 +387,8 @@ class __$$ChangeDisplayTypeImplCopyWithImpl<$Res>
       $Res Function(_$ChangeDisplayTypeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -410,7 +427,9 @@ class _$ChangeDisplayTypeImpl implements _ChangeDisplayType {
   @override
   int get hashCode => Object.hash(runtimeType, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeDisplayTypeImplCopyWith<_$ChangeDisplayTypeImpl> get copyWith =>
@@ -497,7 +516,10 @@ abstract class _ChangeDisplayType implements FridgeManagementEvent {
       _$ChangeDisplayTypeImpl;
 
   SectionDisplayType get type;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChangeDisplayTypeImplCopyWith<_$ChangeDisplayTypeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -519,6 +541,8 @@ class __$$ChangeSortTypeImplCopyWithImpl<$Res>
       _$ChangeSortTypeImpl _value, $Res Function(_$ChangeSortTypeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -557,7 +581,9 @@ class _$ChangeSortTypeImpl implements _ChangeSortType {
   @override
   int get hashCode => Object.hash(runtimeType, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeSortTypeImplCopyWith<_$ChangeSortTypeImpl> get copyWith =>
@@ -643,7 +669,10 @@ abstract class _ChangeSortType implements FridgeManagementEvent {
   const factory _ChangeSortType(final FridgeSort type) = _$ChangeSortTypeImpl;
 
   FridgeSort get type;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChangeSortTypeImplCopyWith<_$ChangeSortTypeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -658,7 +687,9 @@ mixin _$FridgeManagementState {
   List<Fridge>? get fridges => throw _privateConstructorUsedError;
   Fridge? get selectedFridge => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FridgeManagementState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FridgeManagementStateCopyWith<FridgeManagementState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -693,6 +724,8 @@ class _$FridgeManagementStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FridgeManagementState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -736,6 +769,8 @@ class _$FridgeManagementStateCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of FridgeManagementState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RFUserCopyWith<$Res>? get user {
@@ -748,6 +783,8 @@ class _$FridgeManagementStateCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of FridgeManagementState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FridgeCopyWith<$Res>? get selectedFridge {
@@ -794,6 +831,8 @@ class __$$FridgeManagementStateImplCopyWithImpl<$Res>
       $Res Function(_$FridgeManagementStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FridgeManagementState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -912,7 +951,9 @@ class _$FridgeManagementStateImpl implements _FridgeManagementState {
       const DeepCollectionEquality().hash(_fridges),
       selectedFridge);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FridgeManagementState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FridgeManagementStateImplCopyWith<_$FridgeManagementStateImpl>
@@ -944,8 +985,11 @@ abstract class _FridgeManagementState implements FridgeManagementState {
   List<Fridge>? get fridges;
   @override
   Fridge? get selectedFridge;
+
+  /// Create a copy of FridgeManagementState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FridgeManagementStateImplCopyWith<_$FridgeManagementStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

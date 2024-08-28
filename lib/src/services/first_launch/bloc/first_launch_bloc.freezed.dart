@@ -72,6 +72,9 @@ class _$FirstLaunchEventCopyWithImpl<$Res, $Val extends FirstLaunchEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of FirstLaunchEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -88,6 +91,9 @@ class __$$IsFirstLaunchImplCopyWithImpl<$Res>
   __$$IsFirstLaunchImplCopyWithImpl(
       _$IsFirstLaunchImpl _value, $Res Function(_$IsFirstLaunchImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FirstLaunchEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -190,6 +196,9 @@ class __$$SetFirstLaunchImplCopyWithImpl<$Res>
   __$$SetFirstLaunchImplCopyWithImpl(
       _$SetFirstLaunchImpl _value, $Res Function(_$SetFirstLaunchImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of FirstLaunchEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -282,7 +291,9 @@ abstract class _SetFirstLaunch implements FirstLaunchEvent {
 mixin _$FirstLaunchState {
   bool get isFirstLaunch => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FirstLaunchState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FirstLaunchStateCopyWith<FirstLaunchState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -306,6 +317,8 @@ class _$FirstLaunchStateCopyWithImpl<$Res, $Val extends FirstLaunchState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FirstLaunchState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -339,6 +352,8 @@ class __$$FirstLaunchStateImplCopyWithImpl<$Res>
       $Res Function(_$FirstLaunchStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FirstLaunchState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -379,7 +394,9 @@ class _$FirstLaunchStateImpl implements _FirstLaunchState {
   @override
   int get hashCode => Object.hash(runtimeType, isFirstLaunch);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FirstLaunchState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FirstLaunchStateImplCopyWith<_$FirstLaunchStateImpl> get copyWith =>
@@ -393,8 +410,11 @@ abstract class _FirstLaunchState implements FirstLaunchState {
 
   @override
   bool get isFirstLaunch;
+
+  /// Create a copy of FirstLaunchState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FirstLaunchStateImplCopyWith<_$FirstLaunchStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

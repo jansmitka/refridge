@@ -75,6 +75,9 @@ class _$SnackbarEventCopyWithImpl<$Res, $Val extends SnackbarEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SnackbarEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -91,6 +94,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SnackbarEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -199,6 +205,8 @@ class __$$ShowSnackBarImplCopyWithImpl<$Res>
       _$ShowSnackBarImpl _value, $Res Function(_$ShowSnackBarImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SnackbarEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -253,7 +261,9 @@ class _$ShowSnackBarImpl implements _ShowSnackBar {
   @override
   int get hashCode => Object.hash(runtimeType, type, title, body);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SnackbarEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ShowSnackBarImplCopyWith<_$ShowSnackBarImpl> get copyWith =>
@@ -333,7 +343,10 @@ abstract class _ShowSnackBar implements SnackbarEvent {
   SnackbarType get type;
   String get title;
   String get body;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SnackbarEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ShowSnackBarImplCopyWith<_$ShowSnackBarImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -347,7 +360,9 @@ mixin _$SnackbarState {
   String? get title => throw _privateConstructorUsedError;
   String? get body => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SnackbarState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SnackbarStateCopyWith<SnackbarState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -377,6 +392,8 @@ class _$SnackbarStateCopyWithImpl<$Res, $Val extends SnackbarState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SnackbarState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -441,6 +458,8 @@ class __$$SnackbarStateImplCopyWithImpl<$Res>
       _$SnackbarStateImpl _value, $Res Function(_$SnackbarStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SnackbarState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -532,7 +551,9 @@ class _$SnackbarStateImpl implements _SnackbarState {
   int get hashCode => Object.hash(
       runtimeType, isLoading, isError, showSnackbar, snackbarType, title, body);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SnackbarState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SnackbarStateImplCopyWith<_$SnackbarStateImpl> get copyWith =>
@@ -560,8 +581,11 @@ abstract class _SnackbarState implements SnackbarState {
   String? get title;
   @override
   String? get body;
+
+  /// Create a copy of SnackbarState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SnackbarStateImplCopyWith<_$SnackbarStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
