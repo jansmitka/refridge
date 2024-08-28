@@ -28,7 +28,9 @@ mixin _$RFUser {
   List<String>? get fridges => throw _privateConstructorUsedError;
   List<String>? get shoppingLists => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RFUser
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RFUserCopyWith<RFUser> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -61,6 +63,8 @@ class _$RFUserCopyWithImpl<$Res, $Val extends RFUser>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RFUser
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -154,6 +158,8 @@ class __$$RFUserImplCopyWithImpl<$Res>
       _$RFUserImpl _value, $Res Function(_$RFUserImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RFUser
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -319,7 +325,9 @@ class _$RFUserImpl implements _RFUser {
       const DeepCollectionEquality().hash(_fridges),
       const DeepCollectionEquality().hash(_shoppingLists));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RFUser
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RFUserImplCopyWith<_$RFUserImpl> get copyWith =>
@@ -362,8 +370,11 @@ abstract class _RFUser implements RFUser {
   List<String>? get fridges;
   @override
   List<String>? get shoppingLists;
+
+  /// Create a copy of RFUser
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RFUserImplCopyWith<_$RFUserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

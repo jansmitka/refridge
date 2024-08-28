@@ -76,6 +76,9 @@ class _$RemoteNotificationsEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of RemoteNotificationsEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -95,6 +98,9 @@ class __$$RequestNotificationPermissionImplCopyWithImpl<$Res>
       _$RequestNotificationPermissionImpl _value,
       $Res Function(_$RequestNotificationPermissionImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RemoteNotificationsEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -207,6 +213,8 @@ class __$$OnTokenRefreshImplCopyWithImpl<$Res>
       _$OnTokenRefreshImpl _value, $Res Function(_$OnTokenRefreshImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemoteNotificationsEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -245,7 +253,9 @@ class _$OnTokenRefreshImpl implements _OnTokenRefresh {
   @override
   int get hashCode => Object.hash(runtimeType, token);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoteNotificationsEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnTokenRefreshImplCopyWith<_$OnTokenRefreshImpl> get copyWith =>
@@ -322,7 +332,10 @@ abstract class _OnTokenRefresh implements RemoteNotificationsEvent {
   const factory _OnTokenRefresh(final String token) = _$OnTokenRefreshImpl;
 
   String get token;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RemoteNotificationsEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnTokenRefreshImplCopyWith<_$OnTokenRefreshImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -334,7 +347,9 @@ mixin _$RemoteNotificationsState {
   NotificationPermissionStatus get permissionStatus =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoteNotificationsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RemoteNotificationsStateCopyWith<RemoteNotificationsState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -362,6 +377,8 @@ class _$RemoteNotificationsStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RemoteNotificationsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -411,6 +428,8 @@ class __$$RemoteNotificationsStateImplCopyWithImpl<$Res>
       $Res Function(_$RemoteNotificationsStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemoteNotificationsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -474,7 +493,9 @@ class _$RemoteNotificationsStateImpl implements _RemoteNotificationsState {
   int get hashCode =>
       Object.hash(runtimeType, isLoading, isError, permissionStatus);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoteNotificationsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RemoteNotificationsStateImplCopyWith<_$RemoteNotificationsStateImpl>
@@ -495,8 +516,11 @@ abstract class _RemoteNotificationsState implements RemoteNotificationsState {
   bool get isError;
   @override
   NotificationPermissionStatus get permissionStatus;
+
+  /// Create a copy of RemoteNotificationsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RemoteNotificationsStateImplCopyWith<_$RemoteNotificationsStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -77,6 +77,9 @@ class _$MainEventCopyWithImpl<$Res, $Val extends MainEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -92,6 +95,9 @@ class __$$InitImplCopyWithImpl<$Res>
     implements _$$InitImplCopyWith<$Res> {
   __$$InitImplCopyWithImpl(_$InitImpl _value, $Res Function(_$InitImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -203,6 +209,8 @@ class __$$GetUserDataImplCopyWithImpl<$Res>
       _$GetUserDataImpl _value, $Res Function(_$GetUserDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -241,7 +249,9 @@ class _$GetUserDataImpl implements _GetUserData {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetUserDataImplCopyWith<_$GetUserDataImpl> get copyWith =>
@@ -320,7 +330,10 @@ abstract class _GetUserData implements MainEvent {
   const factory _GetUserData(final User user) = _$GetUserDataImpl;
 
   User get user;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetUserDataImplCopyWith<_$GetUserDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -342,6 +355,8 @@ class __$$SetScreenStateImplCopyWithImpl<$Res>
       _$SetScreenStateImpl _value, $Res Function(_$SetScreenStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -381,7 +396,9 @@ class _$SetScreenStateImpl implements _SetScreenState {
   @override
   int get hashCode => Object.hash(runtimeType, screenState);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SetScreenStateImplCopyWith<_$SetScreenStateImpl> get copyWith =>
@@ -462,7 +479,10 @@ abstract class _SetScreenState implements MainEvent {
       _$SetScreenStateImpl;
 
   ScreenState get screenState;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SetScreenStateImplCopyWith<_$SetScreenStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -475,7 +495,9 @@ mixin _$MainState {
   ScreenState get screenState => throw _privateConstructorUsedError;
   RFUser? get user => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MainState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MainStateCopyWith<MainState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -505,6 +527,8 @@ class _$MainStateCopyWithImpl<$Res, $Val extends MainState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MainState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -538,6 +562,8 @@ class _$MainStateCopyWithImpl<$Res, $Val extends MainState>
     ) as $Val);
   }
 
+  /// Create a copy of MainState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RFUserCopyWith<$Res>? get user {
@@ -578,6 +604,8 @@ class __$$MainStateImplCopyWithImpl<$Res>
       _$MainStateImpl _value, $Res Function(_$MainStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MainState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -661,7 +689,9 @@ class _$MainStateImpl implements _MainState {
   int get hashCode => Object.hash(
       runtimeType, isLoading, isError, missingUserInfo, screenState, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MainState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MainStateImplCopyWith<_$MainStateImpl> get copyWith =>
@@ -686,8 +716,11 @@ abstract class _MainState implements MainState {
   ScreenState get screenState;
   @override
   RFUser? get user;
+
+  /// Create a copy of MainState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MainStateImplCopyWith<_$MainStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

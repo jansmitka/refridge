@@ -90,6 +90,9 @@ class _$AddToFridgeEventCopyWithImpl<$Res, $Val extends AddToFridgeEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -110,6 +113,8 @@ class __$$InitImplCopyWithImpl<$Res>
   __$$InitImplCopyWithImpl(_$InitImpl _value, $Res Function(_$InitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,6 +128,8 @@ class __$$InitImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FridgeCopyWith<$Res> get selectedFridge {
@@ -157,7 +164,9 @@ class _$InitImpl implements _Init {
   @override
   int get hashCode => Object.hash(runtimeType, selectedFridge);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InitImplCopyWith<_$InitImpl> get copyWith =>
@@ -248,7 +257,10 @@ abstract class _Init implements AddToFridgeEvent {
   const factory _Init(final Fridge selectedFridge) = _$InitImpl;
 
   Fridge get selectedFridge;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InitImplCopyWith<_$InitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -272,6 +284,8 @@ class __$$ChangeFridgeImplCopyWithImpl<$Res>
       _$ChangeFridgeImpl _value, $Res Function(_$ChangeFridgeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -285,6 +299,8 @@ class __$$ChangeFridgeImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FridgeCopyWith<$Res> get selectedFridge {
@@ -319,7 +335,9 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
   @override
   int get hashCode => Object.hash(runtimeType, selectedFridge);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeFridgeImplCopyWith<_$ChangeFridgeImpl> get copyWith =>
@@ -410,7 +428,10 @@ abstract class _ChangeFridge implements AddToFridgeEvent {
   const factory _ChangeFridge(final Fridge selectedFridge) = _$ChangeFridgeImpl;
 
   Fridge get selectedFridge;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChangeFridgeImplCopyWith<_$ChangeFridgeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -432,6 +453,8 @@ class __$$AddGroceryImplCopyWithImpl<$Res>
       _$AddGroceryImpl _value, $Res Function(_$AddGroceryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -470,7 +493,9 @@ class _$AddGroceryImpl implements _AddGrocery {
   @override
   int get hashCode => Object.hash(runtimeType, grocery);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddGroceryImplCopyWith<_$AddGroceryImpl> get copyWith =>
@@ -561,7 +586,10 @@ abstract class _AddGrocery implements AddToFridgeEvent {
   const factory _AddGrocery(final GroceryTemplate grocery) = _$AddGroceryImpl;
 
   GroceryTemplate get grocery;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddGroceryImplCopyWith<_$AddGroceryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -583,6 +611,8 @@ class __$$SearchGroceryImplCopyWithImpl<$Res>
       _$SearchGroceryImpl _value, $Res Function(_$SearchGroceryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -629,7 +659,9 @@ class _$SearchGroceryImpl implements _SearchGrocery {
   @override
   int get hashCode => Object.hash(runtimeType, context, input);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchGroceryImplCopyWith<_$SearchGroceryImpl> get copyWith =>
@@ -722,7 +754,10 @@ abstract class _SearchGrocery implements AddToFridgeEvent {
 
   BuildContext get context;
   String get input;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchGroceryImplCopyWith<_$SearchGroceryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -741,6 +776,9 @@ class __$$AddToFridgeImplCopyWithImpl<$Res>
   __$$AddToFridgeImplCopyWithImpl(
       _$AddToFridgeImpl _value, $Res Function(_$AddToFridgeImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -856,7 +894,9 @@ mixin _$AddToFridgeState {
   List<GroceryTemplate> get searchedGroceries =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddToFridgeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddToFridgeStateCopyWith<AddToFridgeState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -887,6 +927,8 @@ class _$AddToFridgeStateCopyWithImpl<$Res, $Val extends AddToFridgeState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddToFridgeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -920,6 +962,8 @@ class _$AddToFridgeStateCopyWithImpl<$Res, $Val extends AddToFridgeState>
     ) as $Val);
   }
 
+  /// Create a copy of AddToFridgeState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FridgeCopyWith<$Res>? get selectedFridge {
@@ -960,6 +1004,8 @@ class __$$AddToFridgeStateImplCopyWithImpl<$Res>
       $Res Function(_$AddToFridgeStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddToFridgeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1064,7 +1110,9 @@ class _$AddToFridgeStateImpl implements _AddToFridgeState {
       const DeepCollectionEquality().hash(_selectedGroceries),
       const DeepCollectionEquality().hash(_searchedGroceries));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddToFridgeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddToFridgeStateImplCopyWith<_$AddToFridgeStateImpl> get copyWith =>
@@ -1090,8 +1138,11 @@ abstract class _AddToFridgeState implements AddToFridgeState {
   List<Grocery> get selectedGroceries;
   @override
   List<GroceryTemplate> get searchedGroceries;
+
+  /// Create a copy of AddToFridgeState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddToFridgeStateImplCopyWith<_$AddToFridgeStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -26,7 +26,9 @@ mixin _$Grocery {
   GroceryUnits? get defaultUnit => throw _privateConstructorUsedError;
   GroceryUnits? get unit => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Grocery
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GroceryCopyWith<Grocery> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -57,6 +59,8 @@ class _$GroceryCopyWithImpl<$Res, $Val extends Grocery>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Grocery
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,6 +142,8 @@ class __$$GroceryImplCopyWithImpl<$Res>
       _$GroceryImpl _value, $Res Function(_$GroceryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Grocery
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,7 +261,9 @@ class _$GroceryImpl implements _Grocery {
   int get hashCode => Object.hash(runtimeType, groceryId, label, imagePath,
       defaultType, type, amount, expirationDate, defaultUnit, unit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Grocery
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GroceryImplCopyWith<_$GroceryImpl> get copyWith =>
@@ -292,8 +300,11 @@ abstract class _Grocery implements Grocery {
   GroceryUnits? get defaultUnit;
   @override
   GroceryUnits? get unit;
+
+  /// Create a copy of Grocery
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GroceryImplCopyWith<_$GroceryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -22,7 +22,9 @@ mixin _$Fridge {
   FridgeType? get type => throw _privateConstructorUsedError;
   List<String>? get users => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Fridge
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FridgeCopyWith<Fridge> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -49,6 +51,8 @@ class _$FridgeCopyWithImpl<$Res, $Val extends Fridge>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Fridge
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +110,8 @@ class __$$FridgeImplCopyWithImpl<$Res>
       _$FridgeImpl _value, $Res Function(_$FridgeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Fridge
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,7 +198,9 @@ class _$FridgeImpl implements _Fridge {
   int get hashCode => Object.hash(runtimeType, fridgeId, title, isDefault, type,
       const DeepCollectionEquality().hash(_users));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Fridge
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FridgeImplCopyWith<_$FridgeImpl> get copyWith =>
@@ -217,8 +225,11 @@ abstract class _Fridge implements Fridge {
   FridgeType? get type;
   @override
   List<String>? get users;
+
+  /// Create a copy of Fridge
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FridgeImplCopyWith<_$FridgeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
