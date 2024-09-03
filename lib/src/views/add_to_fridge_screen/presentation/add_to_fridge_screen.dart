@@ -57,7 +57,6 @@ class _AddToFridgeScreenState extends State<AddToFridgeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print('---test');
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: RFScreenWrapper(
