@@ -38,7 +38,7 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
 
   void amountIncrease() {
     setState(() {
-      switch (widget.grocery.unit!) {
+      switch (_selectedUnit) {
         case GroceryUnits.pcs:
           _selectedAmountPcs++;
           break;
@@ -55,17 +55,17 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
   }
 
   void amountDecrease() {
-    if (widget.grocery.unit! == GroceryUnits.pcs && _selectedAmountPcs > 1) {
+    if (_selectedUnit == GroceryUnits.pcs && _selectedAmountPcs > 1) {
       setState(() {
         _selectedAmountPcs--;
       });
     }
-    if (widget.grocery.unit! == GroceryUnits.kg && _selectedAmountKg > 1) {
+    if (_selectedUnit == GroceryUnits.kg && _selectedAmountKg > 1) {
       setState(() {
         _selectedAmountKg--;
       });
     }
-    if (widget.grocery.unit! == GroceryUnits.l && _selectedAmountL > 1) {
+    if (_selectedUnit == GroceryUnits.l && _selectedAmountL > 1) {
       setState(() {
         _selectedAmountL--;
       });
@@ -74,7 +74,7 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
 
   void amountChanged(double value) {
     setState(() {
-      switch (widget.grocery.unit!) {
+      switch (_selectedUnit) {
         case GroceryUnits.ml:
           _selectedAmountMl = value;
           break;
@@ -132,7 +132,7 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
                   width: 8,
                 ),
                 Text(
-                  _selectedUnit.getLabel(context),
+                  _selectedUnit.getUnit(context),
                   style: Theme.of(context).textTheme.bodyLarge!,
                 )
               ],

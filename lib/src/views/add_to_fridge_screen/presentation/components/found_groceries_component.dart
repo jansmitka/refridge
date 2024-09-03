@@ -33,10 +33,12 @@ class FoundGroceriesComponent extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Image.asset(
-                            groceries[index].imgPath,
-                            width: 35,
-                            height: 35,
+                          RFPadding.xSmallHorizontal(
+                            child: Image.asset(
+                              groceries[index].imgPath,
+                              width: 35,
+                              height: 35,
+                            ),
                           ),
                           Text(groceries[index].getLabel(context))
                         ],

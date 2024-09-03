@@ -28,7 +28,7 @@ class AmountIncreaseField extends StatelessWidget {
         children: [
           Center(
               child: Text(
-            "${amount}x",
+            "$amount",
             style: Theme.of(context).textTheme.bodyLarge!,
           )),
           Align(
