@@ -7,8 +7,8 @@ import 'package:refridge/src/settings/theme/colors.dart';
 import 'package:refridge/src/views/fridge_screen/bloc/fridge_management_bloc.dart';
 import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
 
-class FridgeAddBottomsheet extends StatelessWidget {
-  const FridgeAddBottomsheet({super.key});
+class BotSheetAddToFridgeSelector extends StatelessWidget {
+  const BotSheetAddToFridgeSelector({super.key});
 
   @override
   Widget build(BuildContext context) {

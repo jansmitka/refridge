@@ -6,6 +6,10 @@ class AddToFridgeEvent with _$AddToFridgeEvent {
   const factory AddToFridgeEvent.changeFridge(Fridge selectedFridge) =
       _ChangeFridge;
   const factory AddToFridgeEvent.addGrocery(Grocery grocery) = _AddGrocery;
+  const factory AddToFridgeEvent.editGrocery(Grocery grocery) = _EditGrocery;
+  const factory AddToFridgeEvent.removeGrocery(Grocery grocery) =
+      _RemoveGrocery;
+  const factory AddToFridgeEvent.sort(FridgeSort sort) = _Sort;
   const factory AddToFridgeEvent.searchGrocery(
       BuildContext context, String input) = _SearchGrocery;
   const factory AddToFridgeEvent.addToFridge() = _AddToFridge;

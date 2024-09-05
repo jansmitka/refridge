@@ -6,10 +6,16 @@ import 'package:refridge/src/widgetbook/containers/grocery_grid_tile.dart';
 class GroceriesList extends StatefulWidget {
   final List<Grocery> groceries;
   final SectionDisplayType displayType;
+  final Function(Grocery) onEdit;
+  final Function(Grocery) onAddToList;
+  final Function(Grocery) onDelete;
   const GroceriesList({
     super.key,
     required this.groceries,
     required this.displayType,
+    required this.onEdit,
+    required this.onAddToList,
+    required this.onDelete,
   });
 
   @override
@@ -29,7 +35,12 @@ class _GroceriesListState extends State<GroceriesList> {
         ),
         itemCount: widget.groceries.length,
         itemBuilder: (context, index) {
-          return GroceryGridTile(grocery: widget.groceries[index]);
+          return GroceryGridTile(
+            grocery: widget.groceries[index],
+            onEdit: widget.onEdit,
+            onAddToList: widget.onAddToList,
+            onDelete: widget.onDelete,
+          );
         },
       );
     }

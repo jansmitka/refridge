@@ -39,16 +39,17 @@ class Grocery with _$Grocery {
   }
 
   factory Grocery.fromTemplate(
-    GroceryTemplate template,
-  ) {
+    GroceryTemplate template, {
+    bool useNull = true,
+  }) {
     return Grocery(
       groceryId: template.id,
       label: template.label,
       imagePath: template.imgPath,
       type: template.defaultType,
       defaultType: template.defaultType,
-      amount: null,
-      expirationDate: null,
+      amount: useNull ? null : 1,
+      expirationDate: useNull ? null : DateTime.now(),
       defaultUnit: template.defaultUnit,
       unit: template.defaultUnit,
     );
