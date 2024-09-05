@@ -8,5 +8,6 @@ class AddToFridgeState with _$AddToFridgeState {
     Fridge? selectedFridge,
     @Default([]) List<Grocery> selectedGroceries,
     @Default([]) List<GroceryTemplate> searchedGroceries,
+    @Default(FridgeSort.az) FridgeSort selectedSort,
   }) = _AddToFridgeState;
 }

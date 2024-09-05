@@ -9,18 +9,20 @@ import 'package:refridge/src/widgetbook/input_fields/amount_increase_fiels.dart'
 import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class AddGroceryBottomSheet extends StatefulWidget {
+class BotSheetAddToFridge extends StatefulWidget {
   final Grocery grocery;
-  const AddGroceryBottomSheet({
+  final String btnLabel;
+  const BotSheetAddToFridge({
     super.key,
     required this.grocery,
+    required this.btnLabel,
   });
 
   @override
-  State<AddGroceryBottomSheet> createState() => _AddGroceryBottomSheetState();
+  State<BotSheetAddToFridge> createState() => _BotSheetAddToFridgeState();
 }
 
-class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
+class _BotSheetAddToFridgeState extends State<BotSheetAddToFridge> {
   int _selectedAmountPcs = 1;
   int _selectedAmountKg = 1;
   int _selectedAmountL = 1;
@@ -34,6 +36,26 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
   void initState() {
     super.initState();
     _selectedUnit = widget.grocery.unit!;
+    if (widget.grocery.amount != null) {
+      switch (_selectedUnit) {
+        case GroceryUnits.pcs:
+          _selectedAmountPcs = widget.grocery.amount!.toInt();
+          break;
+        case GroceryUnits.kg:
+          _selectedAmountKg = widget.grocery.amount!.toInt();
+          break;
+        case GroceryUnits.l:
+          _selectedAmountL = widget.grocery.amount!.toInt();
+          break;
+        case GroceryUnits.g:
+          _selectedAmountG = widget.grocery.amount!;
+          break;
+        case GroceryUnits.ml:
+          _selectedAmountMl = widget.grocery.amount!;
+          break;
+      }
+    }
+    _expirationDate = widget.grocery.expirationDate;
   }
 
   void amountIncrease() {
@@ -168,7 +190,7 @@ class _AddGroceryBottomSheetState extends State<AddGroceryBottomSheet> {
         ),
         RFPadding.normalAll(
           child: PrimaryTextButton(
-            lable: AppLocalizations.of(context)!.add_item_to_fridge_bottom_add,
+            lable: widget.btnLabel,
             onTap: () {
               double amount = 0;
               switch (_selectedUnit) {

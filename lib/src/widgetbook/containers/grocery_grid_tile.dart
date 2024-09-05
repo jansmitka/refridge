@@ -4,117 +4,161 @@ import 'package:refridge/src/domain/extensions/double_extenstion.dart';
 import 'package:refridge/src/domain/extensions/groceries_extension.dart';
 import 'package:refridge/src/domain/models/grocery.dart';
 import 'package:refridge/src/domain/models/grocery_template.dart';
-import 'package:refridge/src/widgetbook/containers/date_picker.dart';
+import 'package:refridge/src/settings/theme/colors.dart';
+import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
 
 class GroceryGridTile extends StatefulWidget {
   final Grocery grocery;
+  final Function(Grocery) onEdit;
+  final Function(Grocery) onAddToList;
+  final Function(Grocery) onDelete;
 
-  const GroceryGridTile({super.key, required this.grocery});
+  const GroceryGridTile({
+    super.key,
+    required this.grocery,
+    required this.onEdit,
+    required this.onAddToList,
+    required this.onDelete,
+  });
 
   @override
   State<GroceryGridTile> createState() => _GroceryGridTileState();
 }
 
-class _GroceryGridTileState extends State<GroceryGridTile>
-    with SingleTickerProviderStateMixin {
-  bool isFlipped = false;
-  late AnimationController _controller;
-  late Animation<double> _animation;
+class _GroceryGridTileState extends State<GroceryGridTile> {
+  bool _isPanelVisible = false; // Control panel visibility
 
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 500),
-    );
-    _animation = Tween<double>(begin: 0, end: 1).animate(_controller);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  void _flip() {
+  void _togglePanel() {
     setState(() {
-      isFlipped = !isFlipped;
-      if (isFlipped) {
-        _controller.forward();
-      } else {
-        _controller.reverse();
-      }
+      _isPanelVisible = !_isPanelVisible; // Toggle panel visibility
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: _flip,
-      child: AnimatedBuilder(
-        animation: _animation,
-        builder: (context, child) {
-          // Rotating the container for flip effect
-          return Transform(
-            alignment: Alignment.center,
-            transform: Matrix4.rotationY(_animation.value * 3.1416),
-            child: _animation.value < 0.5 ? _buildFront() : _buildBack(),
-          );
-        },
-      ),
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        GestureDetector(
+          onTap: _togglePanel, // Close the panel when tapping on the container
+          child: _buildMainContainer(),
+        ),
+        AnimatedPositioned(
+          duration: const Duration(milliseconds: 100),
+          bottom: _isPanelVisible ? 0 : -60, // Change to adjust panel height
+          left: 0,
+          right: 0,
+          child: _buildSlidingPanel(),
+        ),
+      ],
     );
   }
 
-  Widget _buildBack() {
-    // Back of the container
+  Widget _buildSlidingPanel() {
     return Container(
-      width: 150,
-      height: 150,
+      height: 50,
       decoration: BoxDecoration(
-        color: Colors.redAccent[100],
+        color: RFColors.primaryColor,
         borderRadius: BorderRadius.circular(15),
       ),
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Icon(Icons.delete, color: Colors.white),
-          Icon(Icons.remove, color: Colors.white),
+          GestureDetector(
+            onTap: () {
+              _togglePanel();
+              widget.onDelete(widget.grocery);
+            },
+            child: const SizedBox(
+              width: 35,
+              height: 35,
+              child: Icon(
+                Icons.delete,
+                color: RFColors.generalBg,
+                size: 20,
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              _togglePanel();
+              widget.onAddToList(widget.grocery);
+            },
+            child: const SizedBox(
+              width: 35,
+              height: 35,
+              child: Icon(
+                Icons.shopping_cart_checkout_outlined,
+                color: RFColors.generalBg,
+                size: 20,
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              _togglePanel();
+              widget.onEdit(widget.grocery);
+            },
+            child: const SizedBox(
+              width: 35,
+              height: 35,
+              child: Icon(
+                Icons.edit,
+                color: RFColors.generalBg,
+                size: 20,
+              ),
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildFront() {
+  Widget _buildMainContainer() {
     return Container(
-      padding: const EdgeInsets.all(8.0),
+      constraints: const BoxConstraints(
+        minWidth: 125,
+        minHeight: 125,
+      ),
       decoration: BoxDecoration(
         color: Colors.grey[200], // Replace with your desired background color
         borderRadius: BorderRadius.circular(15.0),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            widget.grocery.imagePath ?? '',
-            height: 50, // Adjust size based on your design
-            fit: BoxFit.contain,
-          ),
-          const SizedBox(height: 8.0),
-          Text(
-            widget.grocery.getLabel(context),
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Text(
-            "${widget.grocery.amount!.toLabel()} ${widget.grocery.unit!.getUnit(context)}",
-            style: const TextStyle(color: Colors.grey),
-          ),
-          // SizedBox(height: 4.0),
-          // Text(
-          //   grocery.expirationDate?.ddmmYYYY() ?? '',
-          //   style: TextStyle(color: Colors.redAccent, fontSize: 12.0),
-          // ),
-        ],
+      child: RFPadding.small(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image.asset(
+              widget.grocery.imagePath ?? '',
+              height: 40, // Adjust size based on your design
+              fit: BoxFit.contain,
+            ),
+            Text(
+              widget.grocery.getLabel(context),
+              style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+            Text(
+              "${widget.grocery.amount!.toLabel()} ${widget.grocery.unit!.getUnit(context)}",
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: RFColors.greyPrimary,
+                  ),
+            ),
+            if (widget.grocery.expirationDate != null)
+              RFPadding.small(
+                bottom: false,
+                child: Text(
+                  widget.grocery.expirationDate?.ddmmYYYY() ?? '',
+                  style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                        color: RFColors.primaryColor,
+                      ),
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }

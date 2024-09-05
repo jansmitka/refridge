@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 enum FridgeSort {
   az,
   za,
-  amountAsc,
-  amountDes,
-  durabilityAsc,
-  durabilityDes,
+  expirationDes,
+  expirationAsc,
 }
 
 extension SortExt on FridgeSort {
@@ -16,14 +14,14 @@ extension SortExt on FridgeSort {
         return Icons.abc;
       case FridgeSort.za:
         return Icons.abc;
-      case FridgeSort.amountAsc:
-        return Icons.tag_outlined;
-      case FridgeSort.amountDes:
-        return Icons.tag_outlined;
-      case FridgeSort.durabilityAsc:
+      case FridgeSort.expirationAsc:
         return Icons.access_time;
-      case FridgeSort.durabilityDes:
+      case FridgeSort.expirationDes:
         return Icons.access_time;
     }
+  }
+
+  bool isAscending() {
+    return this == FridgeSort.expirationAsc || this == FridgeSort.za;
   }
 }

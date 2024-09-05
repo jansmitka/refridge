@@ -5,9 +5,11 @@ import 'package:refridge/src/services/enums/fridge_sort_enum.dart';
 import 'package:refridge/src/services/enums/section_display_enum.dart';
 import 'package:refridge/src/settings/get_it_setup.dart';
 import 'package:refridge/src/settings/theme/colors.dart';
+import 'package:refridge/src/views/bottom_sheets/presentation/botsheet_sort_fridge.dart';
 import 'package:refridge/src/views/fridge_screen/bloc/fridge_management_bloc.dart';
-import 'package:refridge/src/views/home_screen/presentation/containers/fridge_add_bottomsheet.dart';
+import 'package:refridge/src/views/bottom_sheets/presentation/botsheet_add_to_fridge_selector.dart';
 import 'package:refridge/src/widgetbook/buttons/small_secondary_btn.dart';
+import 'package:refridge/src/widgetbook/buttons/sort_button.dart';
 import 'package:refridge/src/widgetbook/containers/error_container.dart';
 import 'package:refridge/src/widgetbook/dialogs/modal_bottom_sheet.dart';
 import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
@@ -17,10 +19,18 @@ class FridgeSection extends StatelessWidget {
     super.key,
   });
 
-  bool isAscending(FridgeSort type) {
-    return type == FridgeSort.amountAsc ||
-        type == FridgeSort.durabilityAsc ||
-        type == FridgeSort.za;
+  void sortTapped(BuildContext context, FridgeSort selectedSort) async {
+    final result = await showRFBottomSheet<FridgeSort>(
+      context: context,
+      title: AppLocalizations.of(context)!.botsheet_sort_fridge_title,
+      builder: (context) => BotSheetSortFridge(
+        sort: selectedSort,
+      ),
+    );
+    if (result != null) {
+      getIt<FridgeManagementBloc>()
+          .add(FridgeManagementEvent.changeSortType(result));
+    }
   }
 
   @override
@@ -54,37 +64,12 @@ class FridgeSection extends StatelessWidget {
                           ],
                         ),
                       ),
-                      RFPadding.smallVertical(
-                        child: GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(25),
-                              color: RFColors.greySecondary,
-                            ),
-                            child: Row(
-                              children: [
-                                const Icon(
-                                  Icons.sort,
-                                  size: 15,
-                                ),
-                                const SizedBox(
-                                  width: 5,
-                                ),
-                                Icon(
-                                  state.sortType.getIcon(),
-                                  color: RFColors.primaryColor,
-                                ),
-                                Icon(
-                                  isAscending(state.sortType)
-                                      ? Icons.arrow_drop_up_rounded
-                                      : Icons.arrow_drop_down_rounded,
-                                  color: RFColors.primaryColor,
-                                ),
-                              ],
-                            ),
-                          ),
+                      SortButton(
+                        icon: state.sortType.getIcon(),
+                        isAsc: state.sortType.isAscending(),
+                        onTap: () => sortTapped(
+                          context,
+                          state.sortType,
                         ),
                       ),
                     ],
@@ -98,7 +83,7 @@ class FridgeSection extends StatelessWidget {
                               title: AppLocalizations.of(context)!
                                   .add_fridge_bottom_sheet_title,
                               builder: (context) =>
-                                  const FridgeAddBottomsheet());
+                                  const BotSheetAddToFridgeSelector());
                         },
                         icon: Icons.add,
                       ),

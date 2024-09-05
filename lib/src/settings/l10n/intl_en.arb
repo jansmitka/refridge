@@ -87,12 +87,19 @@
 
     "add_to_fridge_screen_title" : "Add to my Fridge",
     "add_to_fridge_screen_section_title" : "What to add",
+    "add_to_fridge_screen_btn" : "Add Items",
 
     "add_item_to_fridge_bottom_title" : "Add Item",
     "add_item_to_fridge_bottom_expiration" : "Expiration date",
     "add_item_to_fridge_bottom_add" : "Add",
 
-    
+    "edit_item_to_fridge_bottom_title" : "Edit Item",
+    "edit_item_to_fridge_bottom_expiration" : "Expiration date",
+    "edit_item_to_fridge_bottom_add" : "Edit",
+
+    "botsheet_sort_fridge_title" : "Sort Fridge",
+    "botsheet_sort_fridge_btn" : "Continue",
+
     "grocery_apple": "Apple",
     "grocery_banana": "Banana",
     "grocery_orange": "Orange",
@@ -206,7 +213,7 @@
     "grocery_pickles": "Pickles",
     "grocery_salsa": "Salsa",
     "grocery_cereal": "Cereal",
-    "grocery_pancake_waffle_mix": "Pancake/Waffle Mix",
+    "grocery_pancake_waffle_mix": "Pancakes",
     "grocery_syrup": "Syrup",
     "grocery_instant_oatmeal": "Instant Oatmeal",
     "grocery_breakfast_bars": "Breakfast Bars",
