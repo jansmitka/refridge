@@ -9,6 +9,8 @@ class GroceriesList extends StatefulWidget {
   final Function(Grocery) onEdit;
   final Function(Grocery) onAddToList;
   final Function(Grocery) onDelete;
+  final bool useMaxItems;
+  final bool neverScrool;
   const GroceriesList({
     super.key,
     required this.groceries,
@@ -16,6 +18,8 @@ class GroceriesList extends StatefulWidget {
     required this.onEdit,
     required this.onAddToList,
     required this.onDelete,
+    this.useMaxItems = false,
+    this.neverScrool = false,
   });
 
   @override
@@ -27,13 +31,19 @@ class _GroceriesListState extends State<GroceriesList> {
   Widget build(BuildContext context) {
     if (widget.displayType == SectionDisplayType.grid) {
       return GridView.builder(
+        shrinkWrap: widget
+            .neverScrool, // Makes the GridView take only the space it needs
+        physics:
+            widget.neverScrool ? const NeverScrollableScrollPhysics() : null,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3, // 3 items per row
           mainAxisSpacing: 10.0,
           crossAxisSpacing: 10.0,
           childAspectRatio: 1, // Adjust based on the design
         ),
-        itemCount: widget.groceries.length,
+        itemCount: widget.groceries.length > 9 && widget.useMaxItems
+            ? 9
+            : widget.groceries.length,
         itemBuilder: (context, index) {
           return GroceryGridTile(
             grocery: widget.groceries[index],

@@ -16,6 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$Grocery {
+  String? get id => throw _privateConstructorUsedError;
   String? get groceryId => throw _privateConstructorUsedError;
   String? get label => throw _privateConstructorUsedError;
   String? get imagePath => throw _privateConstructorUsedError;
@@ -38,7 +39,8 @@ abstract class $GroceryCopyWith<$Res> {
       _$GroceryCopyWithImpl<$Res, Grocery>;
   @useResult
   $Res call(
-      {String? groceryId,
+      {String? id,
+      String? groceryId,
       String? label,
       String? imagePath,
       GroceryType? defaultType,
@@ -64,6 +66,7 @@ class _$GroceryCopyWithImpl<$Res, $Val extends Grocery>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? groceryId = freezed,
     Object? label = freezed,
     Object? imagePath = freezed,
@@ -75,6 +78,10 @@ class _$GroceryCopyWithImpl<$Res, $Val extends Grocery>
     Object? unit = freezed,
   }) {
     return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       groceryId: freezed == groceryId
           ? _value.groceryId
           : groceryId // ignore: cast_nullable_to_non_nullable
@@ -123,7 +130,8 @@ abstract class _$$GroceryImplCopyWith<$Res> implements $GroceryCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String? groceryId,
+      {String? id,
+      String? groceryId,
       String? label,
       String? imagePath,
       GroceryType? defaultType,
@@ -147,6 +155,7 @@ class __$$GroceryImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? groceryId = freezed,
     Object? label = freezed,
     Object? imagePath = freezed,
@@ -158,6 +167,10 @@ class __$$GroceryImplCopyWithImpl<$Res>
     Object? unit = freezed,
   }) {
     return _then(_$GroceryImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       groceryId: freezed == groceryId
           ? _value.groceryId
           : groceryId // ignore: cast_nullable_to_non_nullable
@@ -202,7 +215,8 @@ class __$$GroceryImplCopyWithImpl<$Res>
 
 class _$GroceryImpl implements _Grocery {
   const _$GroceryImpl(
-      {required this.groceryId,
+      {required this.id,
+      required this.groceryId,
       required this.label,
       required this.imagePath,
       required this.defaultType,
@@ -212,6 +226,8 @@ class _$GroceryImpl implements _Grocery {
       required this.defaultUnit,
       required this.unit});
 
+  @override
+  final String? id;
   @override
   final String? groceryId;
   @override
@@ -233,7 +249,7 @@ class _$GroceryImpl implements _Grocery {
 
   @override
   String toString() {
-    return 'Grocery(groceryId: $groceryId, label: $label, imagePath: $imagePath, defaultType: $defaultType, type: $type, amount: $amount, expirationDate: $expirationDate, defaultUnit: $defaultUnit, unit: $unit)';
+    return 'Grocery(id: $id, groceryId: $groceryId, label: $label, imagePath: $imagePath, defaultType: $defaultType, type: $type, amount: $amount, expirationDate: $expirationDate, defaultUnit: $defaultUnit, unit: $unit)';
   }
 
   @override
@@ -241,6 +257,7 @@ class _$GroceryImpl implements _Grocery {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GroceryImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.groceryId, groceryId) ||
                 other.groceryId == groceryId) &&
             (identical(other.label, label) || other.label == label) &&
@@ -258,7 +275,7 @@ class _$GroceryImpl implements _Grocery {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, groceryId, label, imagePath,
+  int get hashCode => Object.hash(runtimeType, id, groceryId, label, imagePath,
       defaultType, type, amount, expirationDate, defaultUnit, unit);
 
   /// Create a copy of Grocery
@@ -272,7 +289,8 @@ class _$GroceryImpl implements _Grocery {
 
 abstract class _Grocery implements Grocery {
   const factory _Grocery(
-      {required final String? groceryId,
+      {required final String? id,
+      required final String? groceryId,
       required final String? label,
       required final String? imagePath,
       required final GroceryType? defaultType,
@@ -282,6 +300,8 @@ abstract class _Grocery implements Grocery {
       required final GroceryUnits? defaultUnit,
       required final GroceryUnits? unit}) = _$GroceryImpl;
 
+  @override
+  String? get id;
   @override
   String? get groceryId;
   @override

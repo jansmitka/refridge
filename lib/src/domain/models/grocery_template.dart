@@ -8,7 +8,7 @@ enum GroceryType {
 }
 
 extension GroceryTypeExt on GroceryType {
-  int toInt() {
+  int toDatabase() {
     switch (this) {
       case GroceryType.liquid:
         return 1;
@@ -27,7 +27,7 @@ enum GroceryUnits {
 }
 
 extension GroceryUnitsExt on GroceryUnits {
-  int toInt() {
+  int toDatabase() {
     switch (this) {
       case GroceryUnits.ml:
         return 1;

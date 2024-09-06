@@ -10,5 +10,6 @@ class FridgeManagementState with _$FridgeManagementState {
     RFUser? user,
     List<Fridge>? fridges,
     Fridge? selectedFridge,
+    @Default([]) List<Grocery> groceries,
   }) = _FridgeManagementState;
 }
