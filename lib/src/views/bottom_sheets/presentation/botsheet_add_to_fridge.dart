@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:refridge/src/domain/extensions/groceries_extension.dart';
 import 'package:refridge/src/domain/models/grocery.dart';
 import 'package:refridge/src/domain/models/grocery_template.dart';
-import 'package:refridge/src/widgetbook/containers/date_picker.dart';
+import 'package:refridge/src/settings/theme/colors.dart';
+import 'package:refridge/src/widgetbook/containers/date_selector.dart';
 import 'package:refridge/src/widgetbook/containers/unit_selector.dart';
 import 'package:refridge/src/widgetbook/buttons/primary_text_button.dart';
 import 'package:refridge/src/widgetbook/input_fields/amount_increase_fiels.dart';
@@ -12,10 +13,14 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class BotSheetAddToFridge extends StatefulWidget {
   final Grocery grocery;
   final String btnLabel;
+  final String succesLabel;
+  final bool showSucces;
   const BotSheetAddToFridge({
     super.key,
     required this.grocery,
     required this.btnLabel,
+    required this.succesLabel,
+    this.showSucces = true,
   });
 
   @override
@@ -29,6 +34,8 @@ class _BotSheetAddToFridgeState extends State<BotSheetAddToFridge> {
   double _selectedAmountG = 500.0;
   double _selectedAmountMl = 500.0;
   DateTime? _expirationDate;
+
+  bool _isCompleted = false;
 
   GroceryUnits _selectedUnit = GroceryUnits.kg;
 
@@ -123,6 +130,33 @@ class _BotSheetAddToFridgeState extends State<BotSheetAddToFridge> {
 
   @override
   Widget build(BuildContext context) {
+    if (_isCompleted && widget.showSucces) {
+      return Column(
+        children: [
+          const Icon(
+            Icons.check_circle_outline,
+            size: 50,
+            color: RFColors.successColor,
+          ),
+          RFPadding.smallVertical(
+            child: Text(
+              widget.succesLabel,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyLarge!
+                  .copyWith(fontWeight: FontWeight.bold),
+            ),
+          ),
+          RFPadding.normalAll(
+            child: PrimaryTextButton(
+              lable: widget.btnLabel,
+              isLoading: true,
+              onTap: () {},
+            ),
+          ),
+        ],
+      );
+    }
     return Column(
       children: [
         Image.asset(widget.grocery.imagePath!),
@@ -138,25 +172,24 @@ class _BotSheetAddToFridgeState extends State<BotSheetAddToFridge> {
             _selectedUnit == GroceryUnits.kg ||
             _selectedUnit == GroceryUnits.l)
           RFPadding.normalVertical(
-            child: Row(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AmountIncreaseField(
-                  amount: _selectedUnit == GroceryUnits.pcs
-                      ? _selectedAmountPcs
-                      : _selectedUnit == GroceryUnits.kg
-                          ? _selectedAmountKg
-                          : _selectedAmountL,
-                  onIncrease: amountIncrease,
-                  onDecrease: amountDecrease,
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
                 Text(
                   _selectedUnit.getUnit(context),
                   style: Theme.of(context).textTheme.bodyLarge!,
-                )
+                ),
+                RFPadding.smallVertical(
+                  child: AmountIncreaseField(
+                    amount: _selectedUnit == GroceryUnits.pcs
+                        ? _selectedAmountPcs
+                        : _selectedUnit == GroceryUnits.kg
+                            ? _selectedAmountKg
+                            : _selectedAmountL,
+                    onIncrease: amountIncrease,
+                    onDecrease: amountDecrease,
+                  ),
+                ),
               ],
             ),
           ),
@@ -182,7 +215,7 @@ class _BotSheetAddToFridgeState extends State<BotSheetAddToFridge> {
               ],
             ),
           ),
-        RFDatePicker(
+        RFDateSelector(
           hint: AppLocalizations.of(context)!
               .add_item_to_fridge_bottom_expiration,
           date: _expirationDate,
@@ -191,7 +224,7 @@ class _BotSheetAddToFridgeState extends State<BotSheetAddToFridge> {
         RFPadding.normalAll(
           child: PrimaryTextButton(
             lable: widget.btnLabel,
-            onTap: () {
+            onTap: () async {
               double amount = 0;
               switch (_selectedUnit) {
                 case GroceryUnits.g:
@@ -215,7 +248,18 @@ class _BotSheetAddToFridgeState extends State<BotSheetAddToFridge> {
                 amount: amount,
                 expirationDate: _expirationDate,
               );
-              Navigator.pop(context, grocery);
+
+              if (widget.showSucces) {
+                setState(() {
+                  _isCompleted = true;
+                });
+                await Future.delayed(const Duration(seconds: 1)).then((val) {
+                  // ignore: use_build_context_synchronously
+                  Navigator.pop(context, grocery);
+                });
+              } else {
+                Navigator.pop(context, grocery);
+              }
             },
           ),
         ),

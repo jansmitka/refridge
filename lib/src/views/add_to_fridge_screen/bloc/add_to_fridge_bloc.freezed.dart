@@ -23,9 +23,10 @@ mixin _$AddToFridgeEvent {
     required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
     required TResult Function(FridgeSort sort) sort,
     required TResult Function(BuildContext context, String input) searchGrocery,
-    required TResult Function() addToFridge,
+    required TResult Function(BuildContext context) addToFridge,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,9 +36,10 @@ mixin _$AddToFridgeEvent {
     TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
     TResult? Function(FridgeSort sort)? sort,
     TResult? Function(BuildContext context, String input)? searchGrocery,
-    TResult? Function()? addToFridge,
+    TResult? Function(BuildContext context)? addToFridge,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,9 +49,10 @@ mixin _$AddToFridgeEvent {
     TResult Function(Grocery grocery)? addGrocery,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
     TResult Function(FridgeSort sort)? sort,
     TResult Function(BuildContext context, String input)? searchGrocery,
-    TResult Function()? addToFridge,
+    TResult Function(BuildContext context)? addToFridge,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,6 +63,7 @@ mixin _$AddToFridgeEvent {
     required TResult Function(_AddGrocery value) addGrocery,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
     required TResult Function(_Sort value) sort,
     required TResult Function(_SearchGrocery value) searchGrocery,
     required TResult Function(_AddToFridge value) addToFridge,
@@ -72,6 +76,7 @@ mixin _$AddToFridgeEvent {
     TResult? Function(_AddGrocery value)? addGrocery,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult? Function(_Sort value)? sort,
     TResult? Function(_SearchGrocery value)? searchGrocery,
     TResult? Function(_AddToFridge value)? addToFridge,
@@ -84,6 +89,7 @@ mixin _$AddToFridgeEvent {
     TResult Function(_AddGrocery value)? addGrocery,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult Function(_Sort value)? sort,
     TResult Function(_SearchGrocery value)? searchGrocery,
     TResult Function(_AddToFridge value)? addToFridge,
@@ -198,9 +204,10 @@ class _$InitImpl implements _Init {
     required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
     required TResult Function(FridgeSort sort) sort,
     required TResult Function(BuildContext context, String input) searchGrocery,
-    required TResult Function() addToFridge,
+    required TResult Function(BuildContext context) addToFridge,
   }) {
     return init(selectedFridge);
   }
@@ -213,9 +220,10 @@ class _$InitImpl implements _Init {
     TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
     TResult? Function(FridgeSort sort)? sort,
     TResult? Function(BuildContext context, String input)? searchGrocery,
-    TResult? Function()? addToFridge,
+    TResult? Function(BuildContext context)? addToFridge,
   }) {
     return init?.call(selectedFridge);
   }
@@ -228,9 +236,10 @@ class _$InitImpl implements _Init {
     TResult Function(Grocery grocery)? addGrocery,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
     TResult Function(FridgeSort sort)? sort,
     TResult Function(BuildContext context, String input)? searchGrocery,
-    TResult Function()? addToFridge,
+    TResult Function(BuildContext context)? addToFridge,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -247,6 +256,7 @@ class _$InitImpl implements _Init {
     required TResult Function(_AddGrocery value) addGrocery,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
     required TResult Function(_Sort value) sort,
     required TResult Function(_SearchGrocery value) searchGrocery,
     required TResult Function(_AddToFridge value) addToFridge,
@@ -262,6 +272,7 @@ class _$InitImpl implements _Init {
     TResult? Function(_AddGrocery value)? addGrocery,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult? Function(_Sort value)? sort,
     TResult? Function(_SearchGrocery value)? searchGrocery,
     TResult? Function(_AddToFridge value)? addToFridge,
@@ -277,6 +288,7 @@ class _$InitImpl implements _Init {
     TResult Function(_AddGrocery value)? addGrocery,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult Function(_Sort value)? sort,
     TResult Function(_SearchGrocery value)? searchGrocery,
     TResult Function(_AddToFridge value)? addToFridge,
@@ -387,9 +399,10 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
     required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
     required TResult Function(FridgeSort sort) sort,
     required TResult Function(BuildContext context, String input) searchGrocery,
-    required TResult Function() addToFridge,
+    required TResult Function(BuildContext context) addToFridge,
   }) {
     return changeFridge(selectedFridge);
   }
@@ -402,9 +415,10 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
     TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
     TResult? Function(FridgeSort sort)? sort,
     TResult? Function(BuildContext context, String input)? searchGrocery,
-    TResult? Function()? addToFridge,
+    TResult? Function(BuildContext context)? addToFridge,
   }) {
     return changeFridge?.call(selectedFridge);
   }
@@ -417,9 +431,10 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
     TResult Function(Grocery grocery)? addGrocery,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
     TResult Function(FridgeSort sort)? sort,
     TResult Function(BuildContext context, String input)? searchGrocery,
-    TResult Function()? addToFridge,
+    TResult Function(BuildContext context)? addToFridge,
     required TResult orElse(),
   }) {
     if (changeFridge != null) {
@@ -436,6 +451,7 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
     required TResult Function(_AddGrocery value) addGrocery,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
     required TResult Function(_Sort value) sort,
     required TResult Function(_SearchGrocery value) searchGrocery,
     required TResult Function(_AddToFridge value) addToFridge,
@@ -451,6 +467,7 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
     TResult? Function(_AddGrocery value)? addGrocery,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult? Function(_Sort value)? sort,
     TResult? Function(_SearchGrocery value)? searchGrocery,
     TResult? Function(_AddToFridge value)? addToFridge,
@@ -466,6 +483,7 @@ class _$ChangeFridgeImpl implements _ChangeFridge {
     TResult Function(_AddGrocery value)? addGrocery,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult Function(_Sort value)? sort,
     TResult Function(_SearchGrocery value)? searchGrocery,
     TResult Function(_AddToFridge value)? addToFridge,
@@ -575,9 +593,10 @@ class _$AddGroceryImpl implements _AddGrocery {
     required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
     required TResult Function(FridgeSort sort) sort,
     required TResult Function(BuildContext context, String input) searchGrocery,
-    required TResult Function() addToFridge,
+    required TResult Function(BuildContext context) addToFridge,
   }) {
     return addGrocery(grocery);
   }
@@ -590,9 +609,10 @@ class _$AddGroceryImpl implements _AddGrocery {
     TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
     TResult? Function(FridgeSort sort)? sort,
     TResult? Function(BuildContext context, String input)? searchGrocery,
-    TResult? Function()? addToFridge,
+    TResult? Function(BuildContext context)? addToFridge,
   }) {
     return addGrocery?.call(grocery);
   }
@@ -605,9 +625,10 @@ class _$AddGroceryImpl implements _AddGrocery {
     TResult Function(Grocery grocery)? addGrocery,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
     TResult Function(FridgeSort sort)? sort,
     TResult Function(BuildContext context, String input)? searchGrocery,
-    TResult Function()? addToFridge,
+    TResult Function(BuildContext context)? addToFridge,
     required TResult orElse(),
   }) {
     if (addGrocery != null) {
@@ -624,6 +645,7 @@ class _$AddGroceryImpl implements _AddGrocery {
     required TResult Function(_AddGrocery value) addGrocery,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
     required TResult Function(_Sort value) sort,
     required TResult Function(_SearchGrocery value) searchGrocery,
     required TResult Function(_AddToFridge value) addToFridge,
@@ -639,6 +661,7 @@ class _$AddGroceryImpl implements _AddGrocery {
     TResult? Function(_AddGrocery value)? addGrocery,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult? Function(_Sort value)? sort,
     TResult? Function(_SearchGrocery value)? searchGrocery,
     TResult? Function(_AddToFridge value)? addToFridge,
@@ -654,6 +677,7 @@ class _$AddGroceryImpl implements _AddGrocery {
     TResult Function(_AddGrocery value)? addGrocery,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult Function(_Sort value)? sort,
     TResult Function(_SearchGrocery value)? searchGrocery,
     TResult Function(_AddToFridge value)? addToFridge,
@@ -763,9 +787,10 @@ class _$EditGroceryImpl implements _EditGrocery {
     required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
     required TResult Function(FridgeSort sort) sort,
     required TResult Function(BuildContext context, String input) searchGrocery,
-    required TResult Function() addToFridge,
+    required TResult Function(BuildContext context) addToFridge,
   }) {
     return editGrocery(grocery);
   }
@@ -778,9 +803,10 @@ class _$EditGroceryImpl implements _EditGrocery {
     TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
     TResult? Function(FridgeSort sort)? sort,
     TResult? Function(BuildContext context, String input)? searchGrocery,
-    TResult? Function()? addToFridge,
+    TResult? Function(BuildContext context)? addToFridge,
   }) {
     return editGrocery?.call(grocery);
   }
@@ -793,9 +819,10 @@ class _$EditGroceryImpl implements _EditGrocery {
     TResult Function(Grocery grocery)? addGrocery,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
     TResult Function(FridgeSort sort)? sort,
     TResult Function(BuildContext context, String input)? searchGrocery,
-    TResult Function()? addToFridge,
+    TResult Function(BuildContext context)? addToFridge,
     required TResult orElse(),
   }) {
     if (editGrocery != null) {
@@ -812,6 +839,7 @@ class _$EditGroceryImpl implements _EditGrocery {
     required TResult Function(_AddGrocery value) addGrocery,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
     required TResult Function(_Sort value) sort,
     required TResult Function(_SearchGrocery value) searchGrocery,
     required TResult Function(_AddToFridge value) addToFridge,
@@ -827,6 +855,7 @@ class _$EditGroceryImpl implements _EditGrocery {
     TResult? Function(_AddGrocery value)? addGrocery,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult? Function(_Sort value)? sort,
     TResult? Function(_SearchGrocery value)? searchGrocery,
     TResult? Function(_AddToFridge value)? addToFridge,
@@ -842,6 +871,7 @@ class _$EditGroceryImpl implements _EditGrocery {
     TResult Function(_AddGrocery value)? addGrocery,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult Function(_Sort value)? sort,
     TResult Function(_SearchGrocery value)? searchGrocery,
     TResult Function(_AddToFridge value)? addToFridge,
@@ -951,9 +981,10 @@ class _$RemoveGroceryImpl implements _RemoveGrocery {
     required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
     required TResult Function(FridgeSort sort) sort,
     required TResult Function(BuildContext context, String input) searchGrocery,
-    required TResult Function() addToFridge,
+    required TResult Function(BuildContext context) addToFridge,
   }) {
     return removeGrocery(grocery);
   }
@@ -966,9 +997,10 @@ class _$RemoveGroceryImpl implements _RemoveGrocery {
     TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
     TResult? Function(FridgeSort sort)? sort,
     TResult? Function(BuildContext context, String input)? searchGrocery,
-    TResult? Function()? addToFridge,
+    TResult? Function(BuildContext context)? addToFridge,
   }) {
     return removeGrocery?.call(grocery);
   }
@@ -981,9 +1013,10 @@ class _$RemoveGroceryImpl implements _RemoveGrocery {
     TResult Function(Grocery grocery)? addGrocery,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
     TResult Function(FridgeSort sort)? sort,
     TResult Function(BuildContext context, String input)? searchGrocery,
-    TResult Function()? addToFridge,
+    TResult Function(BuildContext context)? addToFridge,
     required TResult orElse(),
   }) {
     if (removeGrocery != null) {
@@ -1000,6 +1033,7 @@ class _$RemoveGroceryImpl implements _RemoveGrocery {
     required TResult Function(_AddGrocery value) addGrocery,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
     required TResult Function(_Sort value) sort,
     required TResult Function(_SearchGrocery value) searchGrocery,
     required TResult Function(_AddToFridge value) addToFridge,
@@ -1015,6 +1049,7 @@ class _$RemoveGroceryImpl implements _RemoveGrocery {
     TResult? Function(_AddGrocery value)? addGrocery,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult? Function(_Sort value)? sort,
     TResult? Function(_SearchGrocery value)? searchGrocery,
     TResult? Function(_AddToFridge value)? addToFridge,
@@ -1030,6 +1065,7 @@ class _$RemoveGroceryImpl implements _RemoveGrocery {
     TResult Function(_AddGrocery value)? addGrocery,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult Function(_Sort value)? sort,
     TResult Function(_SearchGrocery value)? searchGrocery,
     TResult Function(_AddToFridge value)? addToFridge,
@@ -1052,6 +1088,153 @@ abstract class _RemoveGrocery implements AddToFridgeEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RemoveGroceryImplCopyWith<_$RemoveGroceryImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RemoveAllGroceriesImplCopyWith<$Res> {
+  factory _$$RemoveAllGroceriesImplCopyWith(_$RemoveAllGroceriesImpl value,
+          $Res Function(_$RemoveAllGroceriesImpl) then) =
+      __$$RemoveAllGroceriesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RemoveAllGroceriesImplCopyWithImpl<$Res>
+    extends _$AddToFridgeEventCopyWithImpl<$Res, _$RemoveAllGroceriesImpl>
+    implements _$$RemoveAllGroceriesImplCopyWith<$Res> {
+  __$$RemoveAllGroceriesImplCopyWithImpl(_$RemoveAllGroceriesImpl _value,
+      $Res Function(_$RemoveAllGroceriesImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$RemoveAllGroceriesImpl implements _RemoveAllGroceries {
+  const _$RemoveAllGroceriesImpl();
+
+  @override
+  String toString() {
+    return 'AddToFridgeEvent.removeAllGroceries()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RemoveAllGroceriesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Fridge selectedFridge) init,
+    required TResult Function(Fridge selectedFridge) changeFridge,
+    required TResult Function(Grocery grocery) addGrocery,
+    required TResult Function(Grocery grocery) editGrocery,
+    required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
+    required TResult Function(FridgeSort sort) sort,
+    required TResult Function(BuildContext context, String input) searchGrocery,
+    required TResult Function(BuildContext context) addToFridge,
+  }) {
+    return removeAllGroceries();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Fridge selectedFridge)? init,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
+    TResult? Function(Grocery grocery)? addGrocery,
+    TResult? Function(Grocery grocery)? editGrocery,
+    TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
+    TResult? Function(FridgeSort sort)? sort,
+    TResult? Function(BuildContext context, String input)? searchGrocery,
+    TResult? Function(BuildContext context)? addToFridge,
+  }) {
+    return removeAllGroceries?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Fridge selectedFridge)? init,
+    TResult Function(Fridge selectedFridge)? changeFridge,
+    TResult Function(Grocery grocery)? addGrocery,
+    TResult Function(Grocery grocery)? editGrocery,
+    TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
+    TResult Function(FridgeSort sort)? sort,
+    TResult Function(BuildContext context, String input)? searchGrocery,
+    TResult Function(BuildContext context)? addToFridge,
+    required TResult orElse(),
+  }) {
+    if (removeAllGroceries != null) {
+      return removeAllGroceries();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Init value) init,
+    required TResult Function(_ChangeFridge value) changeFridge,
+    required TResult Function(_AddGrocery value) addGrocery,
+    required TResult Function(_EditGrocery value) editGrocery,
+    required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
+    required TResult Function(_Sort value) sort,
+    required TResult Function(_SearchGrocery value) searchGrocery,
+    required TResult Function(_AddToFridge value) addToFridge,
+  }) {
+    return removeAllGroceries(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Init value)? init,
+    TResult? Function(_ChangeFridge value)? changeFridge,
+    TResult? Function(_AddGrocery value)? addGrocery,
+    TResult? Function(_EditGrocery value)? editGrocery,
+    TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
+    TResult? Function(_Sort value)? sort,
+    TResult? Function(_SearchGrocery value)? searchGrocery,
+    TResult? Function(_AddToFridge value)? addToFridge,
+  }) {
+    return removeAllGroceries?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Init value)? init,
+    TResult Function(_ChangeFridge value)? changeFridge,
+    TResult Function(_AddGrocery value)? addGrocery,
+    TResult Function(_EditGrocery value)? editGrocery,
+    TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
+    TResult Function(_Sort value)? sort,
+    TResult Function(_SearchGrocery value)? searchGrocery,
+    TResult Function(_AddToFridge value)? addToFridge,
+    required TResult orElse(),
+  }) {
+    if (removeAllGroceries != null) {
+      return removeAllGroceries(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RemoveAllGroceries implements AddToFridgeEvent {
+  const factory _RemoveAllGroceries() = _$RemoveAllGroceriesImpl;
 }
 
 /// @nodoc
@@ -1126,9 +1309,10 @@ class _$SortImpl implements _Sort {
     required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
     required TResult Function(FridgeSort sort) sort,
     required TResult Function(BuildContext context, String input) searchGrocery,
-    required TResult Function() addToFridge,
+    required TResult Function(BuildContext context) addToFridge,
   }) {
     return sort(this.sort);
   }
@@ -1141,9 +1325,10 @@ class _$SortImpl implements _Sort {
     TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
     TResult? Function(FridgeSort sort)? sort,
     TResult? Function(BuildContext context, String input)? searchGrocery,
-    TResult? Function()? addToFridge,
+    TResult? Function(BuildContext context)? addToFridge,
   }) {
     return sort?.call(this.sort);
   }
@@ -1156,9 +1341,10 @@ class _$SortImpl implements _Sort {
     TResult Function(Grocery grocery)? addGrocery,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
     TResult Function(FridgeSort sort)? sort,
     TResult Function(BuildContext context, String input)? searchGrocery,
-    TResult Function()? addToFridge,
+    TResult Function(BuildContext context)? addToFridge,
     required TResult orElse(),
   }) {
     if (sort != null) {
@@ -1175,6 +1361,7 @@ class _$SortImpl implements _Sort {
     required TResult Function(_AddGrocery value) addGrocery,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
     required TResult Function(_Sort value) sort,
     required TResult Function(_SearchGrocery value) searchGrocery,
     required TResult Function(_AddToFridge value) addToFridge,
@@ -1190,6 +1377,7 @@ class _$SortImpl implements _Sort {
     TResult? Function(_AddGrocery value)? addGrocery,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult? Function(_Sort value)? sort,
     TResult? Function(_SearchGrocery value)? searchGrocery,
     TResult? Function(_AddToFridge value)? addToFridge,
@@ -1205,6 +1393,7 @@ class _$SortImpl implements _Sort {
     TResult Function(_AddGrocery value)? addGrocery,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult Function(_Sort value)? sort,
     TResult Function(_SearchGrocery value)? searchGrocery,
     TResult Function(_AddToFridge value)? addToFridge,
@@ -1310,9 +1499,10 @@ class _$SearchGroceryImpl implements _SearchGrocery {
     required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
     required TResult Function(FridgeSort sort) sort,
     required TResult Function(BuildContext context, String input) searchGrocery,
-    required TResult Function() addToFridge,
+    required TResult Function(BuildContext context) addToFridge,
   }) {
     return searchGrocery(context, input);
   }
@@ -1325,9 +1515,10 @@ class _$SearchGroceryImpl implements _SearchGrocery {
     TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
     TResult? Function(FridgeSort sort)? sort,
     TResult? Function(BuildContext context, String input)? searchGrocery,
-    TResult? Function()? addToFridge,
+    TResult? Function(BuildContext context)? addToFridge,
   }) {
     return searchGrocery?.call(context, input);
   }
@@ -1340,9 +1531,10 @@ class _$SearchGroceryImpl implements _SearchGrocery {
     TResult Function(Grocery grocery)? addGrocery,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
     TResult Function(FridgeSort sort)? sort,
     TResult Function(BuildContext context, String input)? searchGrocery,
-    TResult Function()? addToFridge,
+    TResult Function(BuildContext context)? addToFridge,
     required TResult orElse(),
   }) {
     if (searchGrocery != null) {
@@ -1359,6 +1551,7 @@ class _$SearchGroceryImpl implements _SearchGrocery {
     required TResult Function(_AddGrocery value) addGrocery,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
     required TResult Function(_Sort value) sort,
     required TResult Function(_SearchGrocery value) searchGrocery,
     required TResult Function(_AddToFridge value) addToFridge,
@@ -1374,6 +1567,7 @@ class _$SearchGroceryImpl implements _SearchGrocery {
     TResult? Function(_AddGrocery value)? addGrocery,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult? Function(_Sort value)? sort,
     TResult? Function(_SearchGrocery value)? searchGrocery,
     TResult? Function(_AddToFridge value)? addToFridge,
@@ -1389,6 +1583,7 @@ class _$SearchGroceryImpl implements _SearchGrocery {
     TResult Function(_AddGrocery value)? addGrocery,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult Function(_Sort value)? sort,
     TResult Function(_SearchGrocery value)? searchGrocery,
     TResult Function(_AddToFridge value)? addToFridge,
@@ -1420,6 +1615,8 @@ abstract class _$$AddToFridgeImplCopyWith<$Res> {
   factory _$$AddToFridgeImplCopyWith(
           _$AddToFridgeImpl value, $Res Function(_$AddToFridgeImpl) then) =
       __$$AddToFridgeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BuildContext context});
 }
 
 /// @nodoc
@@ -1432,26 +1629,51 @@ class __$$AddToFridgeImplCopyWithImpl<$Res>
 
   /// Create a copy of AddToFridgeEvent
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? context = null,
+  }) {
+    return _then(_$AddToFridgeImpl(
+      null == context
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$AddToFridgeImpl implements _AddToFridge {
-  const _$AddToFridgeImpl();
+  const _$AddToFridgeImpl(this.context);
+
+  @override
+  final BuildContext context;
 
   @override
   String toString() {
-    return 'AddToFridgeEvent.addToFridge()';
+    return 'AddToFridgeEvent.addToFridge(context: $context)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$AddToFridgeImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$AddToFridgeImpl &&
+            (identical(other.context, context) || other.context == context));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, context);
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddToFridgeImplCopyWith<_$AddToFridgeImpl> get copyWith =>
+      __$$AddToFridgeImplCopyWithImpl<_$AddToFridgeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1461,11 +1683,12 @@ class _$AddToFridgeImpl implements _AddToFridge {
     required TResult Function(Grocery grocery) addGrocery,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) removeGrocery,
+    required TResult Function() removeAllGroceries,
     required TResult Function(FridgeSort sort) sort,
     required TResult Function(BuildContext context, String input) searchGrocery,
-    required TResult Function() addToFridge,
+    required TResult Function(BuildContext context) addToFridge,
   }) {
-    return addToFridge();
+    return addToFridge(context);
   }
 
   @override
@@ -1476,11 +1699,12 @@ class _$AddToFridgeImpl implements _AddToFridge {
     TResult? Function(Grocery grocery)? addGrocery,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? removeGrocery,
+    TResult? Function()? removeAllGroceries,
     TResult? Function(FridgeSort sort)? sort,
     TResult? Function(BuildContext context, String input)? searchGrocery,
-    TResult? Function()? addToFridge,
+    TResult? Function(BuildContext context)? addToFridge,
   }) {
-    return addToFridge?.call();
+    return addToFridge?.call(context);
   }
 
   @override
@@ -1491,13 +1715,14 @@ class _$AddToFridgeImpl implements _AddToFridge {
     TResult Function(Grocery grocery)? addGrocery,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? removeGrocery,
+    TResult Function()? removeAllGroceries,
     TResult Function(FridgeSort sort)? sort,
     TResult Function(BuildContext context, String input)? searchGrocery,
-    TResult Function()? addToFridge,
+    TResult Function(BuildContext context)? addToFridge,
     required TResult orElse(),
   }) {
     if (addToFridge != null) {
-      return addToFridge();
+      return addToFridge(context);
     }
     return orElse();
   }
@@ -1510,6 +1735,7 @@ class _$AddToFridgeImpl implements _AddToFridge {
     required TResult Function(_AddGrocery value) addGrocery,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_RemoveGrocery value) removeGrocery,
+    required TResult Function(_RemoveAllGroceries value) removeAllGroceries,
     required TResult Function(_Sort value) sort,
     required TResult Function(_SearchGrocery value) searchGrocery,
     required TResult Function(_AddToFridge value) addToFridge,
@@ -1525,6 +1751,7 @@ class _$AddToFridgeImpl implements _AddToFridge {
     TResult? Function(_AddGrocery value)? addGrocery,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_RemoveGrocery value)? removeGrocery,
+    TResult? Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult? Function(_Sort value)? sort,
     TResult? Function(_SearchGrocery value)? searchGrocery,
     TResult? Function(_AddToFridge value)? addToFridge,
@@ -1540,6 +1767,7 @@ class _$AddToFridgeImpl implements _AddToFridge {
     TResult Function(_AddGrocery value)? addGrocery,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_RemoveGrocery value)? removeGrocery,
+    TResult Function(_RemoveAllGroceries value)? removeAllGroceries,
     TResult Function(_Sort value)? sort,
     TResult Function(_SearchGrocery value)? searchGrocery,
     TResult Function(_AddToFridge value)? addToFridge,
@@ -1553,13 +1781,23 @@ class _$AddToFridgeImpl implements _AddToFridge {
 }
 
 abstract class _AddToFridge implements AddToFridgeEvent {
-  const factory _AddToFridge() = _$AddToFridgeImpl;
+  const factory _AddToFridge(final BuildContext context) = _$AddToFridgeImpl;
+
+  BuildContext get context;
+
+  /// Create a copy of AddToFridgeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddToFridgeImplCopyWith<_$AddToFridgeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 mixin _$AddToFridgeState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
+  bool get isCompleted => throw _privateConstructorUsedError;
+  bool get noResults => throw _privateConstructorUsedError;
   Fridge? get selectedFridge => throw _privateConstructorUsedError;
   List<Grocery> get selectedGroceries => throw _privateConstructorUsedError;
   List<GroceryTemplate> get searchedGroceries =>
@@ -1582,6 +1820,8 @@ abstract class $AddToFridgeStateCopyWith<$Res> {
   $Res call(
       {bool isLoading,
       bool isError,
+      bool isCompleted,
+      bool noResults,
       Fridge? selectedFridge,
       List<Grocery> selectedGroceries,
       List<GroceryTemplate> searchedGroceries,
@@ -1607,6 +1847,8 @@ class _$AddToFridgeStateCopyWithImpl<$Res, $Val extends AddToFridgeState>
   $Res call({
     Object? isLoading = null,
     Object? isError = null,
+    Object? isCompleted = null,
+    Object? noResults = null,
     Object? selectedFridge = freezed,
     Object? selectedGroceries = null,
     Object? searchedGroceries = null,
@@ -1620,6 +1862,14 @@ class _$AddToFridgeStateCopyWithImpl<$Res, $Val extends AddToFridgeState>
       isError: null == isError
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isCompleted: null == isCompleted
+          ? _value.isCompleted
+          : isCompleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      noResults: null == noResults
+          ? _value.noResults
+          : noResults // ignore: cast_nullable_to_non_nullable
               as bool,
       selectedFridge: freezed == selectedFridge
           ? _value.selectedFridge
@@ -1666,6 +1916,8 @@ abstract class _$$AddToFridgeStateImplCopyWith<$Res>
   $Res call(
       {bool isLoading,
       bool isError,
+      bool isCompleted,
+      bool noResults,
       Fridge? selectedFridge,
       List<Grocery> selectedGroceries,
       List<GroceryTemplate> searchedGroceries,
@@ -1690,6 +1942,8 @@ class __$$AddToFridgeStateImplCopyWithImpl<$Res>
   $Res call({
     Object? isLoading = null,
     Object? isError = null,
+    Object? isCompleted = null,
+    Object? noResults = null,
     Object? selectedFridge = freezed,
     Object? selectedGroceries = null,
     Object? searchedGroceries = null,
@@ -1703,6 +1957,14 @@ class __$$AddToFridgeStateImplCopyWithImpl<$Res>
       isError: null == isError
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isCompleted: null == isCompleted
+          ? _value.isCompleted
+          : isCompleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      noResults: null == noResults
+          ? _value.noResults
+          : noResults // ignore: cast_nullable_to_non_nullable
               as bool,
       selectedFridge: freezed == selectedFridge
           ? _value.selectedFridge
@@ -1730,6 +1992,8 @@ class _$AddToFridgeStateImpl implements _AddToFridgeState {
   const _$AddToFridgeStateImpl(
       {this.isLoading = false,
       this.isError = false,
+      this.isCompleted = false,
+      this.noResults = false,
       this.selectedFridge,
       final List<Grocery> selectedGroceries = const [],
       final List<GroceryTemplate> searchedGroceries = const [],
@@ -1743,6 +2007,12 @@ class _$AddToFridgeStateImpl implements _AddToFridgeState {
   @override
   @JsonKey()
   final bool isError;
+  @override
+  @JsonKey()
+  final bool isCompleted;
+  @override
+  @JsonKey()
+  final bool noResults;
   @override
   final Fridge? selectedFridge;
   final List<Grocery> _selectedGroceries;
@@ -1771,7 +2041,7 @@ class _$AddToFridgeStateImpl implements _AddToFridgeState {
 
   @override
   String toString() {
-    return 'AddToFridgeState(isLoading: $isLoading, isError: $isError, selectedFridge: $selectedFridge, selectedGroceries: $selectedGroceries, searchedGroceries: $searchedGroceries, selectedSort: $selectedSort)';
+    return 'AddToFridgeState(isLoading: $isLoading, isError: $isError, isCompleted: $isCompleted, noResults: $noResults, selectedFridge: $selectedFridge, selectedGroceries: $selectedGroceries, searchedGroceries: $searchedGroceries, selectedSort: $selectedSort)';
   }
 
   @override
@@ -1782,6 +2052,10 @@ class _$AddToFridgeStateImpl implements _AddToFridgeState {
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
             (identical(other.isError, isError) || other.isError == isError) &&
+            (identical(other.isCompleted, isCompleted) ||
+                other.isCompleted == isCompleted) &&
+            (identical(other.noResults, noResults) ||
+                other.noResults == noResults) &&
             (identical(other.selectedFridge, selectedFridge) ||
                 other.selectedFridge == selectedFridge) &&
             const DeepCollectionEquality()
@@ -1797,6 +2071,8 @@ class _$AddToFridgeStateImpl implements _AddToFridgeState {
       runtimeType,
       isLoading,
       isError,
+      isCompleted,
+      noResults,
       selectedFridge,
       const DeepCollectionEquality().hash(_selectedGroceries),
       const DeepCollectionEquality().hash(_searchedGroceries),
@@ -1816,6 +2092,8 @@ abstract class _AddToFridgeState implements AddToFridgeState {
   const factory _AddToFridgeState(
       {final bool isLoading,
       final bool isError,
+      final bool isCompleted,
+      final bool noResults,
       final Fridge? selectedFridge,
       final List<Grocery> selectedGroceries,
       final List<GroceryTemplate> searchedGroceries,
@@ -1825,6 +2103,10 @@ abstract class _AddToFridgeState implements AddToFridgeState {
   bool get isLoading;
   @override
   bool get isError;
+  @override
+  bool get isCompleted;
+  @override
+  bool get noResults;
   @override
   Fridge? get selectedFridge;
   @override

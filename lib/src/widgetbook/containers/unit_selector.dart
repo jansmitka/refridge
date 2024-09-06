@@ -35,9 +35,10 @@ class _UnitSelectorState extends State<UnitSelector> {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                color: RFColors.secondaryColor,
+                color: RFColors.primaryColor,
               ),
-              width: 65,
+              width: 85,
+              height: 40,
               child: RFPadding.xSmall(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -47,20 +48,10 @@ class _UnitSelectorState extends State<UnitSelector> {
                         widget.selectedUnit.getLabel(context),
                         style: Theme.of(context)
                             .textTheme
-                            .bodyLarge!
+                            .headlineSmall!
                             .copyWith(color: RFColors.generalBg),
                       ),
                     ),
-                    SizedBox(
-                      width: 10,
-                      child: Icon(
-                        _isUnitSelectorVisible
-                            ? Icons.arrow_drop_up_outlined
-                            : Icons.arrow_drop_down,
-                        color: RFColors.primaryColor,
-                        size: 20,
-                      ),
-                    )
                   ],
                 ),
               ),

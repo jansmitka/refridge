@@ -9,6 +9,7 @@ part 'grocery.freezed.dart';
 @freezed
 class Grocery with _$Grocery {
   const factory Grocery({
+    required String? id,
     required String? groceryId,
     required String? label,
     required String? imagePath,
@@ -25,7 +26,8 @@ class Grocery with _$Grocery {
   ) {
     Map<String, dynamic>? data = docUser.data() as Map<String, dynamic>?;
     return Grocery(
-      groceryId: docUser.id,
+      id: docUser.id,
+      groceryId: data?[GroceryField.groceryId],
       label: data?[GroceryField.label],
       imagePath: data?[GroceryField.imagePath],
       type: (data?[GroceryField.type] as int).getGroceryType(),
@@ -43,6 +45,7 @@ class Grocery with _$Grocery {
     bool useNull = true,
   }) {
     return Grocery(
+      id: null,
       groceryId: template.id,
       label: template.label,
       imagePath: template.imgPath,

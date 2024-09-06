@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
       builder: (context, state) {
         if (!state.isLoading && state.user != null) {
           return RFScreenWrapper(
+            useExpanded: true,
             canBack: false,
             title: AppLocalizations.of(context)!
                 .home_screen_title(state.user!.firstname ?? ''),

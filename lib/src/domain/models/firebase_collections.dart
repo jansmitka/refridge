@@ -58,6 +58,7 @@ class GroceryField {
   GroceryField();
 
   static const String id = 'id';
+  static const String groceryId = 'groceryId';
   static const String label = 'label';
   static const String amount = 'amount';
   static const String unit = 'unit';
@@ -97,6 +98,11 @@ class CollectionRef {
       _firestore.collection(Collection.fridges);
   CollectionReference<Map<String, dynamic>> get shoppingList =>
       _firestore.collection(Collection.shoppingLists);
+  CollectionReference<Map<String, dynamic>> groceries(String fridgeId) =>
+      _firestore
+          .collection(Collection.fridges)
+          .doc(fridgeId)
+          .collection(Collection.groceries);
 }
 
 class DocumentRef {
