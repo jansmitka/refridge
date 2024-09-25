@@ -16,6 +16,8 @@ class RFUser with _$RFUser {
     required String? email,
     required bool? isCertified,
     required String? profileImgURL,
+    required String? selectedFridge,
+    required String? selectedList,
     required List<String>? fridges,
     required List<String>? shoppingLists,
   }) = _RFUser;
@@ -35,6 +37,8 @@ class RFUser with _$RFUser {
       lastname: data?[UserField.lastname],
       isCertified: data?[UserField.isCertified],
       profileImgURL: data?[UserField.profileImgURL],
+      selectedFridge: data?[UserField.selectedFridge],
+      selectedList: data?[UserField.selectedList],
       fridges: data?[UserField.fridges] != null
           ? List<String>.from(data![UserField.fridges])
           : [],

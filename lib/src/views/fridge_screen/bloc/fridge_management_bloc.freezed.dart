@@ -22,6 +22,7 @@ mixin _$FridgeManagementEvent {
     required TResult Function() reload,
     required TResult Function() fetchFridgeData,
     required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) deleteGrocery,
     required TResult Function(SectionDisplayType type) changeDisplayType,
@@ -34,6 +35,7 @@ mixin _$FridgeManagementEvent {
     TResult? Function()? reload,
     TResult? Function()? fetchFridgeData,
     TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? deleteGrocery,
     TResult? Function(SectionDisplayType type)? changeDisplayType,
@@ -46,6 +48,7 @@ mixin _$FridgeManagementEvent {
     TResult Function()? reload,
     TResult Function()? fetchFridgeData,
     TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? deleteGrocery,
     TResult Function(SectionDisplayType type)? changeDisplayType,
@@ -59,6 +62,7 @@ mixin _$FridgeManagementEvent {
     required TResult Function(_Reload value) reload,
     required TResult Function(_FetchFridgeData value) fetchFridgeData,
     required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_DeleteGrocery value) deleteGrocery,
     required TResult Function(_ChangeDisplayType value) changeDisplayType,
@@ -71,6 +75,7 @@ mixin _$FridgeManagementEvent {
     TResult? Function(_Reload value)? reload,
     TResult? Function(_FetchFridgeData value)? fetchFridgeData,
     TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_DeleteGrocery value)? deleteGrocery,
     TResult? Function(_ChangeDisplayType value)? changeDisplayType,
@@ -83,6 +88,7 @@ mixin _$FridgeManagementEvent {
     TResult Function(_Reload value)? reload,
     TResult Function(_FetchFridgeData value)? fetchFridgeData,
     TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_DeleteGrocery value)? deleteGrocery,
     TResult Function(_ChangeDisplayType value)? changeDisplayType,
@@ -197,6 +203,7 @@ class _$InitImpl implements _Init {
     required TResult Function() reload,
     required TResult Function() fetchFridgeData,
     required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) deleteGrocery,
     required TResult Function(SectionDisplayType type) changeDisplayType,
@@ -212,6 +219,7 @@ class _$InitImpl implements _Init {
     TResult? Function()? reload,
     TResult? Function()? fetchFridgeData,
     TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? deleteGrocery,
     TResult? Function(SectionDisplayType type)? changeDisplayType,
@@ -227,6 +235,7 @@ class _$InitImpl implements _Init {
     TResult Function()? reload,
     TResult Function()? fetchFridgeData,
     TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? deleteGrocery,
     TResult Function(SectionDisplayType type)? changeDisplayType,
@@ -246,6 +255,7 @@ class _$InitImpl implements _Init {
     required TResult Function(_Reload value) reload,
     required TResult Function(_FetchFridgeData value) fetchFridgeData,
     required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_DeleteGrocery value) deleteGrocery,
     required TResult Function(_ChangeDisplayType value) changeDisplayType,
@@ -261,6 +271,7 @@ class _$InitImpl implements _Init {
     TResult? Function(_Reload value)? reload,
     TResult? Function(_FetchFridgeData value)? fetchFridgeData,
     TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_DeleteGrocery value)? deleteGrocery,
     TResult? Function(_ChangeDisplayType value)? changeDisplayType,
@@ -276,6 +287,7 @@ class _$InitImpl implements _Init {
     TResult Function(_Reload value)? reload,
     TResult Function(_FetchFridgeData value)? fetchFridgeData,
     TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_DeleteGrocery value)? deleteGrocery,
     TResult Function(_ChangeDisplayType value)? changeDisplayType,
@@ -346,6 +358,7 @@ class _$ReloadImpl implements _Reload {
     required TResult Function() reload,
     required TResult Function() fetchFridgeData,
     required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) deleteGrocery,
     required TResult Function(SectionDisplayType type) changeDisplayType,
@@ -361,6 +374,7 @@ class _$ReloadImpl implements _Reload {
     TResult? Function()? reload,
     TResult? Function()? fetchFridgeData,
     TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? deleteGrocery,
     TResult? Function(SectionDisplayType type)? changeDisplayType,
@@ -376,6 +390,7 @@ class _$ReloadImpl implements _Reload {
     TResult Function()? reload,
     TResult Function()? fetchFridgeData,
     TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? deleteGrocery,
     TResult Function(SectionDisplayType type)? changeDisplayType,
@@ -395,6 +410,7 @@ class _$ReloadImpl implements _Reload {
     required TResult Function(_Reload value) reload,
     required TResult Function(_FetchFridgeData value) fetchFridgeData,
     required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_DeleteGrocery value) deleteGrocery,
     required TResult Function(_ChangeDisplayType value) changeDisplayType,
@@ -410,6 +426,7 @@ class _$ReloadImpl implements _Reload {
     TResult? Function(_Reload value)? reload,
     TResult? Function(_FetchFridgeData value)? fetchFridgeData,
     TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_DeleteGrocery value)? deleteGrocery,
     TResult? Function(_ChangeDisplayType value)? changeDisplayType,
@@ -425,6 +442,7 @@ class _$ReloadImpl implements _Reload {
     TResult Function(_Reload value)? reload,
     TResult Function(_FetchFridgeData value)? fetchFridgeData,
     TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_DeleteGrocery value)? deleteGrocery,
     TResult Function(_ChangeDisplayType value)? changeDisplayType,
@@ -487,6 +505,7 @@ class _$FetchFridgeDataImpl implements _FetchFridgeData {
     required TResult Function() reload,
     required TResult Function() fetchFridgeData,
     required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) deleteGrocery,
     required TResult Function(SectionDisplayType type) changeDisplayType,
@@ -502,6 +521,7 @@ class _$FetchFridgeDataImpl implements _FetchFridgeData {
     TResult? Function()? reload,
     TResult? Function()? fetchFridgeData,
     TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? deleteGrocery,
     TResult? Function(SectionDisplayType type)? changeDisplayType,
@@ -517,6 +537,7 @@ class _$FetchFridgeDataImpl implements _FetchFridgeData {
     TResult Function()? reload,
     TResult Function()? fetchFridgeData,
     TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? deleteGrocery,
     TResult Function(SectionDisplayType type)? changeDisplayType,
@@ -536,6 +557,7 @@ class _$FetchFridgeDataImpl implements _FetchFridgeData {
     required TResult Function(_Reload value) reload,
     required TResult Function(_FetchFridgeData value) fetchFridgeData,
     required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_DeleteGrocery value) deleteGrocery,
     required TResult Function(_ChangeDisplayType value) changeDisplayType,
@@ -551,6 +573,7 @@ class _$FetchFridgeDataImpl implements _FetchFridgeData {
     TResult? Function(_Reload value)? reload,
     TResult? Function(_FetchFridgeData value)? fetchFridgeData,
     TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_DeleteGrocery value)? deleteGrocery,
     TResult? Function(_ChangeDisplayType value)? changeDisplayType,
@@ -566,6 +589,7 @@ class _$FetchFridgeDataImpl implements _FetchFridgeData {
     TResult Function(_Reload value)? reload,
     TResult Function(_FetchFridgeData value)? fetchFridgeData,
     TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_DeleteGrocery value)? deleteGrocery,
     TResult Function(_ChangeDisplayType value)? changeDisplayType,
@@ -628,6 +652,7 @@ class _$FetchGroceriesImpl implements _FetchGroceries {
     required TResult Function() reload,
     required TResult Function() fetchFridgeData,
     required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) deleteGrocery,
     required TResult Function(SectionDisplayType type) changeDisplayType,
@@ -643,6 +668,7 @@ class _$FetchGroceriesImpl implements _FetchGroceries {
     TResult? Function()? reload,
     TResult? Function()? fetchFridgeData,
     TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? deleteGrocery,
     TResult? Function(SectionDisplayType type)? changeDisplayType,
@@ -658,6 +684,7 @@ class _$FetchGroceriesImpl implements _FetchGroceries {
     TResult Function()? reload,
     TResult Function()? fetchFridgeData,
     TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? deleteGrocery,
     TResult Function(SectionDisplayType type)? changeDisplayType,
@@ -677,6 +704,7 @@ class _$FetchGroceriesImpl implements _FetchGroceries {
     required TResult Function(_Reload value) reload,
     required TResult Function(_FetchFridgeData value) fetchFridgeData,
     required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_DeleteGrocery value) deleteGrocery,
     required TResult Function(_ChangeDisplayType value) changeDisplayType,
@@ -692,6 +720,7 @@ class _$FetchGroceriesImpl implements _FetchGroceries {
     TResult? Function(_Reload value)? reload,
     TResult? Function(_FetchFridgeData value)? fetchFridgeData,
     TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_DeleteGrocery value)? deleteGrocery,
     TResult? Function(_ChangeDisplayType value)? changeDisplayType,
@@ -707,6 +736,7 @@ class _$FetchGroceriesImpl implements _FetchGroceries {
     TResult Function(_Reload value)? reload,
     TResult Function(_FetchFridgeData value)? fetchFridgeData,
     TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_DeleteGrocery value)? deleteGrocery,
     TResult Function(_ChangeDisplayType value)? changeDisplayType,
@@ -722,6 +752,201 @@ class _$FetchGroceriesImpl implements _FetchGroceries {
 
 abstract class _FetchGroceries implements FridgeManagementEvent {
   const factory _FetchGroceries() = _$FetchGroceriesImpl;
+}
+
+/// @nodoc
+abstract class _$$ChangeFridgeImplCopyWith<$Res> {
+  factory _$$ChangeFridgeImplCopyWith(
+          _$ChangeFridgeImpl value, $Res Function(_$ChangeFridgeImpl) then) =
+      __$$ChangeFridgeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Fridge selectedFridge});
+
+  $FridgeCopyWith<$Res> get selectedFridge;
+}
+
+/// @nodoc
+class __$$ChangeFridgeImplCopyWithImpl<$Res>
+    extends _$FridgeManagementEventCopyWithImpl<$Res, _$ChangeFridgeImpl>
+    implements _$$ChangeFridgeImplCopyWith<$Res> {
+  __$$ChangeFridgeImplCopyWithImpl(
+      _$ChangeFridgeImpl _value, $Res Function(_$ChangeFridgeImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? selectedFridge = null,
+  }) {
+    return _then(_$ChangeFridgeImpl(
+      null == selectedFridge
+          ? _value.selectedFridge
+          : selectedFridge // ignore: cast_nullable_to_non_nullable
+              as Fridge,
+    ));
+  }
+
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FridgeCopyWith<$Res> get selectedFridge {
+    return $FridgeCopyWith<$Res>(_value.selectedFridge, (value) {
+      return _then(_value.copyWith(selectedFridge: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ChangeFridgeImpl implements _ChangeFridge {
+  const _$ChangeFridgeImpl(this.selectedFridge);
+
+  @override
+  final Fridge selectedFridge;
+
+  @override
+  String toString() {
+    return 'FridgeManagementEvent.changeFridge(selectedFridge: $selectedFridge)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeFridgeImpl &&
+            (identical(other.selectedFridge, selectedFridge) ||
+                other.selectedFridge == selectedFridge));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, selectedFridge);
+
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeFridgeImplCopyWith<_$ChangeFridgeImpl> get copyWith =>
+      __$$ChangeFridgeImplCopyWithImpl<_$ChangeFridgeImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(RFUser user) init,
+    required TResult Function() reload,
+    required TResult Function() fetchFridgeData,
+    required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
+    required TResult Function(Grocery grocery) editGrocery,
+    required TResult Function(Grocery grocery) deleteGrocery,
+    required TResult Function(SectionDisplayType type) changeDisplayType,
+    required TResult Function(FridgeSort type) changeSortType,
+  }) {
+    return changeFridge(selectedFridge);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(RFUser user)? init,
+    TResult? Function()? reload,
+    TResult? Function()? fetchFridgeData,
+    TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
+    TResult? Function(Grocery grocery)? editGrocery,
+    TResult? Function(Grocery grocery)? deleteGrocery,
+    TResult? Function(SectionDisplayType type)? changeDisplayType,
+    TResult? Function(FridgeSort type)? changeSortType,
+  }) {
+    return changeFridge?.call(selectedFridge);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(RFUser user)? init,
+    TResult Function()? reload,
+    TResult Function()? fetchFridgeData,
+    TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
+    TResult Function(Grocery grocery)? editGrocery,
+    TResult Function(Grocery grocery)? deleteGrocery,
+    TResult Function(SectionDisplayType type)? changeDisplayType,
+    TResult Function(FridgeSort type)? changeSortType,
+    required TResult orElse(),
+  }) {
+    if (changeFridge != null) {
+      return changeFridge(selectedFridge);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Init value) init,
+    required TResult Function(_Reload value) reload,
+    required TResult Function(_FetchFridgeData value) fetchFridgeData,
+    required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
+    required TResult Function(_EditGrocery value) editGrocery,
+    required TResult Function(_DeleteGrocery value) deleteGrocery,
+    required TResult Function(_ChangeDisplayType value) changeDisplayType,
+    required TResult Function(_ChangeSortType value) changeSortType,
+  }) {
+    return changeFridge(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Init value)? init,
+    TResult? Function(_Reload value)? reload,
+    TResult? Function(_FetchFridgeData value)? fetchFridgeData,
+    TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
+    TResult? Function(_EditGrocery value)? editGrocery,
+    TResult? Function(_DeleteGrocery value)? deleteGrocery,
+    TResult? Function(_ChangeDisplayType value)? changeDisplayType,
+    TResult? Function(_ChangeSortType value)? changeSortType,
+  }) {
+    return changeFridge?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Init value)? init,
+    TResult Function(_Reload value)? reload,
+    TResult Function(_FetchFridgeData value)? fetchFridgeData,
+    TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
+    TResult Function(_EditGrocery value)? editGrocery,
+    TResult Function(_DeleteGrocery value)? deleteGrocery,
+    TResult Function(_ChangeDisplayType value)? changeDisplayType,
+    TResult Function(_ChangeSortType value)? changeSortType,
+    required TResult orElse(),
+  }) {
+    if (changeFridge != null) {
+      return changeFridge(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ChangeFridge implements FridgeManagementEvent {
+  const factory _ChangeFridge(final Fridge selectedFridge) = _$ChangeFridgeImpl;
+
+  Fridge get selectedFridge;
+
+  /// Create a copy of FridgeManagementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ChangeFridgeImplCopyWith<_$ChangeFridgeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -808,6 +1033,7 @@ class _$EditGroceryImpl implements _EditGrocery {
     required TResult Function() reload,
     required TResult Function() fetchFridgeData,
     required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) deleteGrocery,
     required TResult Function(SectionDisplayType type) changeDisplayType,
@@ -823,6 +1049,7 @@ class _$EditGroceryImpl implements _EditGrocery {
     TResult? Function()? reload,
     TResult? Function()? fetchFridgeData,
     TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? deleteGrocery,
     TResult? Function(SectionDisplayType type)? changeDisplayType,
@@ -838,6 +1065,7 @@ class _$EditGroceryImpl implements _EditGrocery {
     TResult Function()? reload,
     TResult Function()? fetchFridgeData,
     TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? deleteGrocery,
     TResult Function(SectionDisplayType type)? changeDisplayType,
@@ -857,6 +1085,7 @@ class _$EditGroceryImpl implements _EditGrocery {
     required TResult Function(_Reload value) reload,
     required TResult Function(_FetchFridgeData value) fetchFridgeData,
     required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_DeleteGrocery value) deleteGrocery,
     required TResult Function(_ChangeDisplayType value) changeDisplayType,
@@ -872,6 +1101,7 @@ class _$EditGroceryImpl implements _EditGrocery {
     TResult? Function(_Reload value)? reload,
     TResult? Function(_FetchFridgeData value)? fetchFridgeData,
     TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_DeleteGrocery value)? deleteGrocery,
     TResult? Function(_ChangeDisplayType value)? changeDisplayType,
@@ -887,6 +1117,7 @@ class _$EditGroceryImpl implements _EditGrocery {
     TResult Function(_Reload value)? reload,
     TResult Function(_FetchFridgeData value)? fetchFridgeData,
     TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_DeleteGrocery value)? deleteGrocery,
     TResult Function(_ChangeDisplayType value)? changeDisplayType,
@@ -996,6 +1227,7 @@ class _$DeleteGroceryImpl implements _DeleteGrocery {
     required TResult Function() reload,
     required TResult Function() fetchFridgeData,
     required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) deleteGrocery,
     required TResult Function(SectionDisplayType type) changeDisplayType,
@@ -1011,6 +1243,7 @@ class _$DeleteGroceryImpl implements _DeleteGrocery {
     TResult? Function()? reload,
     TResult? Function()? fetchFridgeData,
     TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? deleteGrocery,
     TResult? Function(SectionDisplayType type)? changeDisplayType,
@@ -1026,6 +1259,7 @@ class _$DeleteGroceryImpl implements _DeleteGrocery {
     TResult Function()? reload,
     TResult Function()? fetchFridgeData,
     TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? deleteGrocery,
     TResult Function(SectionDisplayType type)? changeDisplayType,
@@ -1045,6 +1279,7 @@ class _$DeleteGroceryImpl implements _DeleteGrocery {
     required TResult Function(_Reload value) reload,
     required TResult Function(_FetchFridgeData value) fetchFridgeData,
     required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_DeleteGrocery value) deleteGrocery,
     required TResult Function(_ChangeDisplayType value) changeDisplayType,
@@ -1060,6 +1295,7 @@ class _$DeleteGroceryImpl implements _DeleteGrocery {
     TResult? Function(_Reload value)? reload,
     TResult? Function(_FetchFridgeData value)? fetchFridgeData,
     TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_DeleteGrocery value)? deleteGrocery,
     TResult? Function(_ChangeDisplayType value)? changeDisplayType,
@@ -1075,6 +1311,7 @@ class _$DeleteGroceryImpl implements _DeleteGrocery {
     TResult Function(_Reload value)? reload,
     TResult Function(_FetchFridgeData value)? fetchFridgeData,
     TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_DeleteGrocery value)? deleteGrocery,
     TResult Function(_ChangeDisplayType value)? changeDisplayType,
@@ -1173,6 +1410,7 @@ class _$ChangeDisplayTypeImpl implements _ChangeDisplayType {
     required TResult Function() reload,
     required TResult Function() fetchFridgeData,
     required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) deleteGrocery,
     required TResult Function(SectionDisplayType type) changeDisplayType,
@@ -1188,6 +1426,7 @@ class _$ChangeDisplayTypeImpl implements _ChangeDisplayType {
     TResult? Function()? reload,
     TResult? Function()? fetchFridgeData,
     TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? deleteGrocery,
     TResult? Function(SectionDisplayType type)? changeDisplayType,
@@ -1203,6 +1442,7 @@ class _$ChangeDisplayTypeImpl implements _ChangeDisplayType {
     TResult Function()? reload,
     TResult Function()? fetchFridgeData,
     TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? deleteGrocery,
     TResult Function(SectionDisplayType type)? changeDisplayType,
@@ -1222,6 +1462,7 @@ class _$ChangeDisplayTypeImpl implements _ChangeDisplayType {
     required TResult Function(_Reload value) reload,
     required TResult Function(_FetchFridgeData value) fetchFridgeData,
     required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_DeleteGrocery value) deleteGrocery,
     required TResult Function(_ChangeDisplayType value) changeDisplayType,
@@ -1237,6 +1478,7 @@ class _$ChangeDisplayTypeImpl implements _ChangeDisplayType {
     TResult? Function(_Reload value)? reload,
     TResult? Function(_FetchFridgeData value)? fetchFridgeData,
     TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_DeleteGrocery value)? deleteGrocery,
     TResult? Function(_ChangeDisplayType value)? changeDisplayType,
@@ -1252,6 +1494,7 @@ class _$ChangeDisplayTypeImpl implements _ChangeDisplayType {
     TResult Function(_Reload value)? reload,
     TResult Function(_FetchFridgeData value)? fetchFridgeData,
     TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_DeleteGrocery value)? deleteGrocery,
     TResult Function(_ChangeDisplayType value)? changeDisplayType,
@@ -1351,6 +1594,7 @@ class _$ChangeSortTypeImpl implements _ChangeSortType {
     required TResult Function() reload,
     required TResult Function() fetchFridgeData,
     required TResult Function() fetchGroceries,
+    required TResult Function(Fridge selectedFridge) changeFridge,
     required TResult Function(Grocery grocery) editGrocery,
     required TResult Function(Grocery grocery) deleteGrocery,
     required TResult Function(SectionDisplayType type) changeDisplayType,
@@ -1366,6 +1610,7 @@ class _$ChangeSortTypeImpl implements _ChangeSortType {
     TResult? Function()? reload,
     TResult? Function()? fetchFridgeData,
     TResult? Function()? fetchGroceries,
+    TResult? Function(Fridge selectedFridge)? changeFridge,
     TResult? Function(Grocery grocery)? editGrocery,
     TResult? Function(Grocery grocery)? deleteGrocery,
     TResult? Function(SectionDisplayType type)? changeDisplayType,
@@ -1381,6 +1626,7 @@ class _$ChangeSortTypeImpl implements _ChangeSortType {
     TResult Function()? reload,
     TResult Function()? fetchFridgeData,
     TResult Function()? fetchGroceries,
+    TResult Function(Fridge selectedFridge)? changeFridge,
     TResult Function(Grocery grocery)? editGrocery,
     TResult Function(Grocery grocery)? deleteGrocery,
     TResult Function(SectionDisplayType type)? changeDisplayType,
@@ -1400,6 +1646,7 @@ class _$ChangeSortTypeImpl implements _ChangeSortType {
     required TResult Function(_Reload value) reload,
     required TResult Function(_FetchFridgeData value) fetchFridgeData,
     required TResult Function(_FetchGroceries value) fetchGroceries,
+    required TResult Function(_ChangeFridge value) changeFridge,
     required TResult Function(_EditGrocery value) editGrocery,
     required TResult Function(_DeleteGrocery value) deleteGrocery,
     required TResult Function(_ChangeDisplayType value) changeDisplayType,
@@ -1415,6 +1662,7 @@ class _$ChangeSortTypeImpl implements _ChangeSortType {
     TResult? Function(_Reload value)? reload,
     TResult? Function(_FetchFridgeData value)? fetchFridgeData,
     TResult? Function(_FetchGroceries value)? fetchGroceries,
+    TResult? Function(_ChangeFridge value)? changeFridge,
     TResult? Function(_EditGrocery value)? editGrocery,
     TResult? Function(_DeleteGrocery value)? deleteGrocery,
     TResult? Function(_ChangeDisplayType value)? changeDisplayType,
@@ -1430,6 +1678,7 @@ class _$ChangeSortTypeImpl implements _ChangeSortType {
     TResult Function(_Reload value)? reload,
     TResult Function(_FetchFridgeData value)? fetchFridgeData,
     TResult Function(_FetchGroceries value)? fetchGroceries,
+    TResult Function(_ChangeFridge value)? changeFridge,
     TResult Function(_EditGrocery value)? editGrocery,
     TResult Function(_DeleteGrocery value)? deleteGrocery,
     TResult Function(_ChangeDisplayType value)? changeDisplayType,

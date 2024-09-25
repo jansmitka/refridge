@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:refridge/src/settings/theme/colors.dart';
 import 'package:refridge/src/views/home_screen/presentation/containers/fridge_section.dart';
 import 'package:refridge/src/views/main_screen/blocs/main_bloc.dart';
+import 'package:refridge/src/views/main_screen/blocs/user_bloc.dart';
 import 'package:refridge/src/widgetbook/containers/user_image.dart';
 import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
 import 'package:refridge/src/widgetbook/wrappers/screen_wrapper.dart';
@@ -13,7 +14,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<MainBloc, MainState>(
+    return BlocBuilder<UserBloc, UserState>(
       builder: (context, state) {
         if (!state.isLoading && state.user != null) {
           return RFScreenWrapper(

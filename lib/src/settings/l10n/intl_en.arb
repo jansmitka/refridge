@@ -73,6 +73,8 @@
 
     "home_screen_title" : "Hello {name}",
     "home_screen_fridge_section_title" : "{name}'s Fridge",
+    "home_screen_fridge_section_no_items_label" : "No items in the Fridge yet!",
+    "home_screen_fridge_section_no_items_btn" : "Add groceries",
 
     "discover_screen_title" : "Lets start Cooking",
 
@@ -107,6 +109,12 @@
 
     "botsheet_sort_fridge_title" : "Sort Fridge",
     "botsheet_sort_fridge_btn" : "Continue",
+
+    "botsheet_change_fridge_title" : "Your Fridges",
+    "botsheet_change_fridge_btn" : "Continue",
+
+    "botsheet_change_list_title" : "Yous Shopping lists",
+    "botsheet_change_list_btn" : "Continue",
 
     "grocery_apple": "Apple",
     "grocery_banana": "Banana",

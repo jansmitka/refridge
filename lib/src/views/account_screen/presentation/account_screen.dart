@@ -7,7 +7,7 @@ import 'package:refridge/src/services/snackbar/blocs/snackbar_bloc.dart';
 import 'package:refridge/src/settings/get_it_setup.dart';
 import 'package:refridge/src/settings/theme/colors.dart';
 import 'package:refridge/src/views/account_screen/bloc/account_bloc.dart';
-import 'package:refridge/src/views/main_screen/blocs/main_bloc.dart';
+import 'package:refridge/src/views/main_screen/blocs/user_bloc.dart';
 import 'package:refridge/src/widgetbook/containers/user_image.dart';
 import 'package:refridge/src/widgetbook/dialogs/modal_bottom_sheet.dart';
 import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
@@ -51,7 +51,7 @@ class _AccountScreenState extends State<AccountScreen> {
   Widget build(BuildContext context) {
     return BlocProvider.value(
       value: getIt<AccountBloc>()
-        ..add(AccountEvent.init(context.read<MainBloc>().state.user)),
+        ..add(AccountEvent.init(context.read<UserBloc>().state.user)),
       child: BlocBuilder<AccountBloc, AccountState>(
         builder: (context, state) {
           return RFScreenWrapper(

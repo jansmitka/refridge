@@ -41,6 +41,8 @@ class UserAuthRepository {
         UserField.userId: userId,
         UserField.fridges: [fridgeRef.id],
         UserField.shoppingLists: [listRef.id],
+        UserField.selectedFridge: fridgeRef.id,
+        UserField.selectedList: listRef.id,
       });
 
       return Result.success(userCredential);
@@ -105,6 +107,8 @@ class UserAuthRepository {
           UserField.userId: userId,
           UserField.fridges: [fridgeRef.id],
           UserField.shoppingLists: [listRef.id],
+          UserField.selectedFridge: fridgeRef.id,
+          UserField.selectedList: listRef.id,
         });
       }
       return Result.success(userCredential);

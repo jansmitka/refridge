@@ -9,6 +9,7 @@ import 'package:refridge/src/views/fridge_screen/bloc/fridge_management_bloc.dar
 import 'package:refridge/src/views/fridge_screen/presentation/fridge_screen.dart';
 import 'package:refridge/src/views/home_screen/presentation/home_screen.dart';
 import 'package:refridge/src/views/main_screen/blocs/main_bloc.dart';
+import 'package:refridge/src/views/main_screen/blocs/user_bloc.dart';
 import 'package:refridge/src/views/main_screen/presentation/containers/navigation_bar.dart';
 import 'package:refridge/src/views/shopping_lists_screen.dart/presentation/shopping_lists_screen.dart';
 import 'package:refridge/src/views/user_required_info/presentation/user_required_info.dart';
@@ -42,9 +43,16 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider.value(
-      value: getIt<MainBloc>()..add(MainEvent.getUserData(widget.user)),
-      child: BlocBuilder<MainBloc, MainState>(
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider.value(
+          value: getIt<MainBloc>(),
+        ),
+        BlocProvider.value(
+          value: getIt<UserBloc>()..add(UserEvent.getUserData(widget.user)),
+        ),
+      ],
+      child: BlocBuilder<UserBloc, UserState>(
         builder: (context, state) {
           if (state.isLoading || state.user == null) {
             return const Scaffold(
@@ -64,6 +72,7 @@ class _MainScreenState extends State<MainScreen> {
               user: state.user,
             );
           }
+
           if (!state.isLoading && state.user != null) {
             return MultiBlocProvider(
               providers: [
@@ -76,14 +85,18 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                 ),
               ],
-              child: Scaffold(
-                body: getScreen(state),
-                bottomNavigationBar: NavBar(
-                  state: state,
-                ),
-              ),
+              child:
+                  BlocBuilder<MainBloc, MainState>(builder: (context, state) {
+                return Scaffold(
+                  body: getScreen(state),
+                  bottomNavigationBar: NavBar(
+                    state: state,
+                  ),
+                );
+              }),
             );
           }
+
           return Container();
         },
       ),
