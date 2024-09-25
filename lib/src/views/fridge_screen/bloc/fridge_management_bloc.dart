@@ -17,7 +17,6 @@ part 'fridge_management_bloc.freezed.dart';
 class FridgeManagementBloc
     extends Bloc<FridgeManagementEvent, FridgeManagementState> {
   final _fridgeRepository = getIt<FridgeRepository>();
-  // StreamSubscription<List<Grocery>>? _grocerySubscription;
   FridgeManagementBloc() : super(const FridgeManagementState()) {
     on<_Init>((event, emit) {
       emit(
@@ -51,12 +50,14 @@ class FridgeManagementBloc
           await _fridgeRepository.getFridgesData(state.user!.fridges ?? []);
 
       if (result.isSuccess) {
+        final selectedFridge = result.value!
+            .firstWhere((item) => item.fridgeId == state.user!.selectedFridge);
         emit(
           state.copyWith(
             isLoading: false,
             isError: false,
             fridges: result.value,
-            selectedFridge: result.value!.first,
+            selectedFridge: selectedFridge,
           ),
         );
         add(const FridgeManagementEvent.fetchGroceries());
@@ -77,10 +78,9 @@ class FridgeManagementBloc
         ),
       );
       // await _grocerySubscription?.cancel();
-      final selectedFridge = state.selectedFridge;
-      if (selectedFridge != null) {
+      if (state.selectedFridge != null) {
         Stream<List<Grocery>> groceriesStrem =
-            _fridgeRepository.streamGroceries(selectedFridge.fridgeId!);
+            _fridgeRepository.streamGroceries(state.selectedFridge!.fridgeId!);
 
         await for (final groceries in groceriesStrem) {
           emit(
@@ -161,6 +161,18 @@ class FridgeManagementBloc
           displayType: event.type,
         ),
       );
+    });
+    on<_ChangeFridge>((event, emit) async {
+      final result = await _fridgeRepository.changeFridge(
+          event.selectedFridge.fridgeId!, state.user!.userId!);
+      if (result.isSuccess) {
+        emit(
+          state.copyWith(
+            selectedFridge: event.selectedFridge,
+          ),
+        );
+        add(const FridgeManagementEvent.fetchGroceries());
+      }
     });
     on<_ChangeSortType>((event, emit) {
       List<Grocery> sortedGroceries = List.from(state.groceries);

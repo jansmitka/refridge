@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'main_bloc.dart';
+part of 'user_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,64 +15,64 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$MainEvent {
+mixin _$UserEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
-    required TResult Function(ScreenState screenState) setScreenState,
+    required TResult Function(User user) getUserData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
-    TResult? Function(ScreenState screenState)? setScreenState,
+    TResult? Function(User user)? getUserData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
-    TResult Function(ScreenState screenState)? setScreenState,
+    TResult Function(User user)? getUserData,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
-    required TResult Function(_SetScreenState value) setScreenState,
+    required TResult Function(_GetUserData value) getUserData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Init value)? init,
-    TResult? Function(_SetScreenState value)? setScreenState,
+    TResult? Function(_GetUserData value)? getUserData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
-    TResult Function(_SetScreenState value)? setScreenState,
+    TResult Function(_GetUserData value)? getUserData,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MainEventCopyWith<$Res> {
-  factory $MainEventCopyWith(MainEvent value, $Res Function(MainEvent) then) =
-      _$MainEventCopyWithImpl<$Res, MainEvent>;
+abstract class $UserEventCopyWith<$Res> {
+  factory $UserEventCopyWith(UserEvent value, $Res Function(UserEvent) then) =
+      _$UserEventCopyWithImpl<$Res, UserEvent>;
 }
 
 /// @nodoc
-class _$MainEventCopyWithImpl<$Res, $Val extends MainEvent>
-    implements $MainEventCopyWith<$Res> {
-  _$MainEventCopyWithImpl(this._value, this._then);
+class _$UserEventCopyWithImpl<$Res, $Val extends UserEvent>
+    implements $UserEventCopyWith<$Res> {
+  _$UserEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MainEvent
+  /// Create a copy of UserEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -85,12 +85,12 @@ abstract class _$$InitImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitImplCopyWithImpl<$Res>
-    extends _$MainEventCopyWithImpl<$Res, _$InitImpl>
+    extends _$UserEventCopyWithImpl<$Res, _$InitImpl>
     implements _$$InitImplCopyWith<$Res> {
   __$$InitImplCopyWithImpl(_$InitImpl _value, $Res Function(_$InitImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MainEvent
+  /// Create a copy of UserEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -101,7 +101,7 @@ class _$InitImpl implements _Init {
 
   @override
   String toString() {
-    return 'MainEvent.init()';
+    return 'UserEvent.init()';
   }
 
   @override
@@ -117,7 +117,7 @@ class _$InitImpl implements _Init {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
-    required TResult Function(ScreenState screenState) setScreenState,
+    required TResult Function(User user) getUserData,
   }) {
     return init();
   }
@@ -126,7 +126,7 @@ class _$InitImpl implements _Init {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
-    TResult? Function(ScreenState screenState)? setScreenState,
+    TResult? Function(User user)? getUserData,
   }) {
     return init?.call();
   }
@@ -135,7 +135,7 @@ class _$InitImpl implements _Init {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
-    TResult Function(ScreenState screenState)? setScreenState,
+    TResult Function(User user)? getUserData,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -148,7 +148,7 @@ class _$InitImpl implements _Init {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
-    required TResult Function(_SetScreenState value) setScreenState,
+    required TResult Function(_GetUserData value) getUserData,
   }) {
     return init(this);
   }
@@ -157,7 +157,7 @@ class _$InitImpl implements _Init {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Init value)? init,
-    TResult? Function(_SetScreenState value)? setScreenState,
+    TResult? Function(_GetUserData value)? getUserData,
   }) {
     return init?.call(this);
   }
@@ -166,7 +166,7 @@ class _$InitImpl implements _Init {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
-    TResult Function(_SetScreenState value)? setScreenState,
+    TResult Function(_GetUserData value)? getUserData,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -176,104 +176,102 @@ class _$InitImpl implements _Init {
   }
 }
 
-abstract class _Init implements MainEvent {
+abstract class _Init implements UserEvent {
   const factory _Init() = _$InitImpl;
 }
 
 /// @nodoc
-abstract class _$$SetScreenStateImplCopyWith<$Res> {
-  factory _$$SetScreenStateImplCopyWith(_$SetScreenStateImpl value,
-          $Res Function(_$SetScreenStateImpl) then) =
-      __$$SetScreenStateImplCopyWithImpl<$Res>;
+abstract class _$$GetUserDataImplCopyWith<$Res> {
+  factory _$$GetUserDataImplCopyWith(
+          _$GetUserDataImpl value, $Res Function(_$GetUserDataImpl) then) =
+      __$$GetUserDataImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ScreenState screenState});
+  $Res call({User user});
 }
 
 /// @nodoc
-class __$$SetScreenStateImplCopyWithImpl<$Res>
-    extends _$MainEventCopyWithImpl<$Res, _$SetScreenStateImpl>
-    implements _$$SetScreenStateImplCopyWith<$Res> {
-  __$$SetScreenStateImplCopyWithImpl(
-      _$SetScreenStateImpl _value, $Res Function(_$SetScreenStateImpl) _then)
+class __$$GetUserDataImplCopyWithImpl<$Res>
+    extends _$UserEventCopyWithImpl<$Res, _$GetUserDataImpl>
+    implements _$$GetUserDataImplCopyWith<$Res> {
+  __$$GetUserDataImplCopyWithImpl(
+      _$GetUserDataImpl _value, $Res Function(_$GetUserDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MainEvent
+  /// Create a copy of UserEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? screenState = null,
+    Object? user = null,
   }) {
-    return _then(_$SetScreenStateImpl(
-      null == screenState
-          ? _value.screenState
-          : screenState // ignore: cast_nullable_to_non_nullable
-              as ScreenState,
+    return _then(_$GetUserDataImpl(
+      null == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
     ));
   }
 }
 
 /// @nodoc
 
-class _$SetScreenStateImpl implements _SetScreenState {
-  const _$SetScreenStateImpl(this.screenState);
+class _$GetUserDataImpl implements _GetUserData {
+  const _$GetUserDataImpl(this.user);
 
   @override
-  final ScreenState screenState;
+  final User user;
 
   @override
   String toString() {
-    return 'MainEvent.setScreenState(screenState: $screenState)';
+    return 'UserEvent.getUserData(user: $user)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SetScreenStateImpl &&
-            (identical(other.screenState, screenState) ||
-                other.screenState == screenState));
+            other is _$GetUserDataImpl &&
+            (identical(other.user, user) || other.user == user));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, screenState);
+  int get hashCode => Object.hash(runtimeType, user);
 
-  /// Create a copy of MainEvent
+  /// Create a copy of UserEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SetScreenStateImplCopyWith<_$SetScreenStateImpl> get copyWith =>
-      __$$SetScreenStateImplCopyWithImpl<_$SetScreenStateImpl>(
-          this, _$identity);
+  _$$GetUserDataImplCopyWith<_$GetUserDataImpl> get copyWith =>
+      __$$GetUserDataImplCopyWithImpl<_$GetUserDataImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
-    required TResult Function(ScreenState screenState) setScreenState,
+    required TResult Function(User user) getUserData,
   }) {
-    return setScreenState(screenState);
+    return getUserData(user);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
-    TResult? Function(ScreenState screenState)? setScreenState,
+    TResult? Function(User user)? getUserData,
   }) {
-    return setScreenState?.call(screenState);
+    return getUserData?.call(user);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
-    TResult Function(ScreenState screenState)? setScreenState,
+    TResult Function(User user)? getUserData,
     required TResult orElse(),
   }) {
-    if (setScreenState != null) {
-      return setScreenState(screenState);
+    if (getUserData != null) {
+      return getUserData(user);
     }
     return orElse();
   }
@@ -282,86 +280,89 @@ class _$SetScreenStateImpl implements _SetScreenState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
-    required TResult Function(_SetScreenState value) setScreenState,
+    required TResult Function(_GetUserData value) getUserData,
   }) {
-    return setScreenState(this);
+    return getUserData(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Init value)? init,
-    TResult? Function(_SetScreenState value)? setScreenState,
+    TResult? Function(_GetUserData value)? getUserData,
   }) {
-    return setScreenState?.call(this);
+    return getUserData?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
-    TResult Function(_SetScreenState value)? setScreenState,
+    TResult Function(_GetUserData value)? getUserData,
     required TResult orElse(),
   }) {
-    if (setScreenState != null) {
-      return setScreenState(this);
+    if (getUserData != null) {
+      return getUserData(this);
     }
     return orElse();
   }
 }
 
-abstract class _SetScreenState implements MainEvent {
-  const factory _SetScreenState(final ScreenState screenState) =
-      _$SetScreenStateImpl;
+abstract class _GetUserData implements UserEvent {
+  const factory _GetUserData(final User user) = _$GetUserDataImpl;
 
-  ScreenState get screenState;
+  User get user;
 
-  /// Create a copy of MainEvent
+  /// Create a copy of UserEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SetScreenStateImplCopyWith<_$SetScreenStateImpl> get copyWith =>
+  _$$GetUserDataImplCopyWith<_$GetUserDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$MainState {
+mixin _$UserState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
-  ScreenState get screenState => throw _privateConstructorUsedError;
+  bool get missingUserInfo => throw _privateConstructorUsedError;
+  RFUser? get user => throw _privateConstructorUsedError;
 
-  /// Create a copy of MainState
+  /// Create a copy of UserState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MainStateCopyWith<MainState> get copyWith =>
+  $UserStateCopyWith<UserState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MainStateCopyWith<$Res> {
-  factory $MainStateCopyWith(MainState value, $Res Function(MainState) then) =
-      _$MainStateCopyWithImpl<$Res, MainState>;
+abstract class $UserStateCopyWith<$Res> {
+  factory $UserStateCopyWith(UserState value, $Res Function(UserState) then) =
+      _$UserStateCopyWithImpl<$Res, UserState>;
   @useResult
-  $Res call({bool isLoading, bool isError, ScreenState screenState});
+  $Res call({bool isLoading, bool isError, bool missingUserInfo, RFUser? user});
+
+  $RFUserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
-class _$MainStateCopyWithImpl<$Res, $Val extends MainState>
-    implements $MainStateCopyWith<$Res> {
-  _$MainStateCopyWithImpl(this._value, this._then);
+class _$UserStateCopyWithImpl<$Res, $Val extends UserState>
+    implements $UserStateCopyWith<$Res> {
+  _$UserStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MainState
+  /// Create a copy of UserState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? isLoading = null,
     Object? isError = null,
-    Object? screenState = null,
+    Object? missingUserInfo = null,
+    Object? user = freezed,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
@@ -372,43 +373,65 @@ class _$MainStateCopyWithImpl<$Res, $Val extends MainState>
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
               as bool,
-      screenState: null == screenState
-          ? _value.screenState
-          : screenState // ignore: cast_nullable_to_non_nullable
-              as ScreenState,
+      missingUserInfo: null == missingUserInfo
+          ? _value.missingUserInfo
+          : missingUserInfo // ignore: cast_nullable_to_non_nullable
+              as bool,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as RFUser?,
     ) as $Val);
+  }
+
+  /// Create a copy of UserState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RFUserCopyWith<$Res>? get user {
+    if (_value.user == null) {
+      return null;
+    }
+
+    return $RFUserCopyWith<$Res>(_value.user!, (value) {
+      return _then(_value.copyWith(user: value) as $Val);
+    });
   }
 }
 
 /// @nodoc
-abstract class _$$MainStateImplCopyWith<$Res>
-    implements $MainStateCopyWith<$Res> {
-  factory _$$MainStateImplCopyWith(
-          _$MainStateImpl value, $Res Function(_$MainStateImpl) then) =
-      __$$MainStateImplCopyWithImpl<$Res>;
+abstract class _$$UserStateImplCopyWith<$Res>
+    implements $UserStateCopyWith<$Res> {
+  factory _$$UserStateImplCopyWith(
+          _$UserStateImpl value, $Res Function(_$UserStateImpl) then) =
+      __$$UserStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isLoading, bool isError, ScreenState screenState});
+  $Res call({bool isLoading, bool isError, bool missingUserInfo, RFUser? user});
+
+  @override
+  $RFUserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
-class __$$MainStateImplCopyWithImpl<$Res>
-    extends _$MainStateCopyWithImpl<$Res, _$MainStateImpl>
-    implements _$$MainStateImplCopyWith<$Res> {
-  __$$MainStateImplCopyWithImpl(
-      _$MainStateImpl _value, $Res Function(_$MainStateImpl) _then)
+class __$$UserStateImplCopyWithImpl<$Res>
+    extends _$UserStateCopyWithImpl<$Res, _$UserStateImpl>
+    implements _$$UserStateImplCopyWith<$Res> {
+  __$$UserStateImplCopyWithImpl(
+      _$UserStateImpl _value, $Res Function(_$UserStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MainState
+  /// Create a copy of UserState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? isLoading = null,
     Object? isError = null,
-    Object? screenState = null,
+    Object? missingUserInfo = null,
+    Object? user = freezed,
   }) {
-    return _then(_$MainStateImpl(
+    return _then(_$UserStateImpl(
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -417,21 +440,26 @@ class __$$MainStateImplCopyWithImpl<$Res>
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
               as bool,
-      screenState: null == screenState
-          ? _value.screenState
-          : screenState // ignore: cast_nullable_to_non_nullable
-              as ScreenState,
+      missingUserInfo: null == missingUserInfo
+          ? _value.missingUserInfo
+          : missingUserInfo // ignore: cast_nullable_to_non_nullable
+              as bool,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as RFUser?,
     ));
   }
 }
 
 /// @nodoc
 
-class _$MainStateImpl implements _MainState {
-  const _$MainStateImpl(
+class _$UserStateImpl implements _UserState {
+  const _$UserStateImpl(
       {this.isLoading = false,
       this.isError = false,
-      this.screenState = ScreenState.home});
+      this.missingUserInfo = false,
+      this.user});
 
   @override
   @JsonKey()
@@ -441,54 +469,61 @@ class _$MainStateImpl implements _MainState {
   final bool isError;
   @override
   @JsonKey()
-  final ScreenState screenState;
+  final bool missingUserInfo;
+  @override
+  final RFUser? user;
 
   @override
   String toString() {
-    return 'MainState(isLoading: $isLoading, isError: $isError, screenState: $screenState)';
+    return 'UserState(isLoading: $isLoading, isError: $isError, missingUserInfo: $missingUserInfo, user: $user)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MainStateImpl &&
+            other is _$UserStateImpl &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
             (identical(other.isError, isError) || other.isError == isError) &&
-            (identical(other.screenState, screenState) ||
-                other.screenState == screenState));
+            (identical(other.missingUserInfo, missingUserInfo) ||
+                other.missingUserInfo == missingUserInfo) &&
+            (identical(other.user, user) || other.user == user));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isLoading, isError, screenState);
+  int get hashCode =>
+      Object.hash(runtimeType, isLoading, isError, missingUserInfo, user);
 
-  /// Create a copy of MainState
+  /// Create a copy of UserState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MainStateImplCopyWith<_$MainStateImpl> get copyWith =>
-      __$$MainStateImplCopyWithImpl<_$MainStateImpl>(this, _$identity);
+  _$$UserStateImplCopyWith<_$UserStateImpl> get copyWith =>
+      __$$UserStateImplCopyWithImpl<_$UserStateImpl>(this, _$identity);
 }
 
-abstract class _MainState implements MainState {
-  const factory _MainState(
+abstract class _UserState implements UserState {
+  const factory _UserState(
       {final bool isLoading,
       final bool isError,
-      final ScreenState screenState}) = _$MainStateImpl;
+      final bool missingUserInfo,
+      final RFUser? user}) = _$UserStateImpl;
 
   @override
   bool get isLoading;
   @override
   bool get isError;
   @override
-  ScreenState get screenState;
+  bool get missingUserInfo;
+  @override
+  RFUser? get user;
 
-  /// Create a copy of MainState
+  /// Create a copy of UserState
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MainStateImplCopyWith<_$MainStateImpl> get copyWith =>
+  _$$UserStateImplCopyWith<_$UserStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -52,6 +52,18 @@ class FridgeRepository {
     }
   }
 
+  Future<Result<bool>> changeFridge(String fridgeId, String userId) async {
+    try {
+      final docRef = documentRef.user(userId);
+      await docRef.update({
+        UserField.selectedFridge: fridgeId,
+      });
+      return Result.success(true);
+    } catch (e) {
+      return Result.error(e.toString());
+    }
+  }
+
   Future<Result<bool>> deleteGrocery(String fridgeId, Grocery grocery) async {
     try {
       final docRef = collectionRef.groceries(fridgeId).doc(grocery.id);

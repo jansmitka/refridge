@@ -8,6 +8,8 @@ class FridgeManagementEvent with _$FridgeManagementEvent {
   const factory FridgeManagementEvent.reload() = _Reload;
   const factory FridgeManagementEvent.fetchFridgeData() = _FetchFridgeData;
   const factory FridgeManagementEvent.fetchGroceries() = _FetchGroceries;
+  const factory FridgeManagementEvent.changeFridge(Fridge selectedFridge) =
+      _ChangeFridge;
   const factory FridgeManagementEvent.editGrocery(Grocery grocery) =
       _EditGrocery;
   const factory FridgeManagementEvent.deleteGrocery(Grocery grocery) =

@@ -11,7 +11,6 @@ import 'package:refridge/src/settings/get_it_setup.dart';
 import 'package:refridge/src/settings/navigation_service.dart';
 import 'package:refridge/src/settings/router/routes.dart';
 import 'package:refridge/src/views/add_to_fridge_screen/bloc/add_to_fridge_bloc.dart';
-import 'package:refridge/src/views/add_to_fridge_screen/presentation/components/empty_selector_container.dart';
 import 'package:refridge/src/views/add_to_fridge_screen/presentation/components/no_results_container.dart';
 import 'package:refridge/src/views/bottom_sheets/presentation/botsheet_add_to_fridge.dart';
 import 'package:refridge/src/views/add_to_fridge_screen/presentation/components/found_groceries_component.dart';
@@ -19,6 +18,7 @@ import 'package:refridge/src/views/bottom_sheets/presentation/botsheet_sort_frid
 import 'package:refridge/src/widgetbook/buttons/primary_btn_small.dart';
 import 'package:refridge/src/widgetbook/buttons/primary_text_button.dart';
 import 'package:refridge/src/widgetbook/buttons/sort_button.dart';
+import 'package:refridge/src/widgetbook/containers/empty_list.dart';
 import 'package:refridge/src/widgetbook/containers/fridge_selector.dart';
 import 'package:refridge/src/widgetbook/containers/groceries_list.dart';
 import 'package:refridge/src/widgetbook/dialogs/modal_bottom_sheet.dart';
@@ -222,7 +222,11 @@ class _AddToFridgeScreenState extends State<AddToFridgeScreen> {
                           if (state.searchedGroceries.isEmpty &&
                               state.selectedGroceries.isEmpty &&
                               searchController.text.isEmpty)
-                            const EmptySelectorContainer(),
+                            RFEmptyList(
+                              icon: Icons.kitchen,
+                              label: AppLocalizations.of(context)!
+                                  .add_to_fridge_screen_nothing_in_fridge,
+                            ),
                         ],
                       ),
                     ),

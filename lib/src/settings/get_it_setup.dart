@@ -17,6 +17,7 @@ import 'package:refridge/src/views/add_to_fridge_screen/bloc/add_to_fridge_bloc.
 import 'package:refridge/src/views/auth_screens/blocs/auth_bloc.dart';
 import 'package:refridge/src/views/fridge_screen/bloc/fridge_management_bloc.dart';
 import 'package:refridge/src/views/main_screen/blocs/main_bloc.dart';
+import 'package:refridge/src/views/main_screen/blocs/user_bloc.dart';
 import 'package:refridge/src/views/user_auth_wrapper/application/bloc/user_auth_bloc.dart';
 import 'package:refridge/src/views/user_required_info/bloc/required_user_info_bloc.dart';
 
@@ -39,6 +40,7 @@ Future configureGetIt() async {
   getIt.registerLazySingleton<SnackbarBloc>(() => SnackbarBloc());
   getIt.registerLazySingleton<FirstLaunchBloc>(() => FirstLaunchBloc());
   getIt.registerLazySingleton<MainBloc>(() => MainBloc());
+  getIt.registerLazySingleton<UserBloc>(() => UserBloc());
   getIt.registerLazySingleton<AccountBloc>(() => AccountBloc());
   getIt.registerLazySingleton<AddToFridgeBloc>(() => AddToFridgeBloc());
   getIt.registerLazySingleton<FridgeManagementBloc>(

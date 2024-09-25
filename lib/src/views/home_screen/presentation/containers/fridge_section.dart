@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:refridge/src/domain/models/fridge.dart';
 import 'package:refridge/src/domain/models/grocery.dart';
 import 'package:refridge/src/services/enums/fridge_sort_enum.dart';
 import 'package:refridge/src/services/enums/section_display_enum.dart';
 import 'package:refridge/src/settings/get_it_setup.dart';
 import 'package:refridge/src/settings/theme/colors.dart';
 import 'package:refridge/src/views/bottom_sheets/presentation/botsheet_add_to_fridge.dart';
+import 'package:refridge/src/views/bottom_sheets/presentation/botsheet_change_fridge.dart';
 import 'package:refridge/src/views/bottom_sheets/presentation/botsheet_sort_fridge.dart';
 import 'package:refridge/src/views/fridge_screen/bloc/fridge_management_bloc.dart';
 import 'package:refridge/src/views/bottom_sheets/presentation/botsheet_add_to_fridge_selector.dart';
 import 'package:refridge/src/views/main_screen/blocs/main_bloc.dart';
 import 'package:refridge/src/widgetbook/buttons/secondary_btn_small.dart';
 import 'package:refridge/src/widgetbook/buttons/sort_button.dart';
+import 'package:refridge/src/widgetbook/containers/empty_list.dart';
 import 'package:refridge/src/widgetbook/containers/error_container.dart';
 import 'package:refridge/src/widgetbook/containers/groceries_list.dart';
 import 'package:refridge/src/widgetbook/dialogs/modal_bottom_sheet.dart';
@@ -60,6 +63,24 @@ class _FridgeSectionState extends State<FridgeSection> {
     }
   }
 
+  onChangeFridgeTapped(
+    List<Fridge> fridges,
+    Fridge selectedFridge,
+  ) async {
+    final result = await showRFBottomSheet<Fridge>(
+      context: context,
+      title: AppLocalizations.of(context)!.botsheet_change_fridge_title,
+      builder: (context) => BotSheetChangeFridge(
+        fridges: fridges,
+        selectedFridge: selectedFridge,
+      ),
+    );
+    if (result != null) {
+      getIt<FridgeManagementBloc>()
+          .add(FridgeManagementEvent.changeFridge(result));
+    }
+  }
+
   void onGroceryAddToList(Grocery grocery) async {
     print('---Add To List');
   }
@@ -91,7 +112,10 @@ class _FridgeSectionState extends State<FridgeSection> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () => onChangeFridgeTapped(
+                            state.fridges!,
+                            state.selectedFridge!,
+                          ),
                           child: Row(
                             children: [
                               Text(
@@ -175,6 +199,22 @@ class _FridgeSectionState extends State<FridgeSection> {
                     ),
                   ],
                 ),
+                if (state.groceries.isEmpty)
+                  RFEmptyList(
+                    icon: Icons.kitchen,
+                    label: AppLocalizations.of(context)!
+                        .home_screen_fridge_section_no_items_label,
+                    onTap: () async {
+                      await showRFBottomSheet<bool>(
+                          context: context,
+                          title: AppLocalizations.of(context)!
+                              .add_fridge_bottom_sheet_title,
+                          builder: (context) =>
+                              const BotSheetAddToFridgeSelector());
+                    },
+                    btnLabel: AppLocalizations.of(context)!
+                        .home_screen_fridge_section_no_items_btn,
+                  ),
                 Expanded(
                   child: GroceriesList(
                     groceries: state.groceries,

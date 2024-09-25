@@ -25,6 +25,8 @@ mixin _$RFUser {
   String? get email => throw _privateConstructorUsedError;
   bool? get isCertified => throw _privateConstructorUsedError;
   String? get profileImgURL => throw _privateConstructorUsedError;
+  String? get selectedFridge => throw _privateConstructorUsedError;
+  String? get selectedList => throw _privateConstructorUsedError;
   List<String>? get fridges => throw _privateConstructorUsedError;
   List<String>? get shoppingLists => throw _privateConstructorUsedError;
 
@@ -49,6 +51,8 @@ abstract class $RFUserCopyWith<$Res> {
       String? email,
       bool? isCertified,
       String? profileImgURL,
+      String? selectedFridge,
+      String? selectedList,
       List<String>? fridges,
       List<String>? shoppingLists});
 }
@@ -77,6 +81,8 @@ class _$RFUserCopyWithImpl<$Res, $Val extends RFUser>
     Object? email = freezed,
     Object? isCertified = freezed,
     Object? profileImgURL = freezed,
+    Object? selectedFridge = freezed,
+    Object? selectedList = freezed,
     Object? fridges = freezed,
     Object? shoppingLists = freezed,
   }) {
@@ -117,6 +123,14 @@ class _$RFUserCopyWithImpl<$Res, $Val extends RFUser>
           ? _value.profileImgURL
           : profileImgURL // ignore: cast_nullable_to_non_nullable
               as String?,
+      selectedFridge: freezed == selectedFridge
+          ? _value.selectedFridge
+          : selectedFridge // ignore: cast_nullable_to_non_nullable
+              as String?,
+      selectedList: freezed == selectedList
+          ? _value.selectedList
+          : selectedList // ignore: cast_nullable_to_non_nullable
+              as String?,
       fridges: freezed == fridges
           ? _value.fridges
           : fridges // ignore: cast_nullable_to_non_nullable
@@ -146,6 +160,8 @@ abstract class _$$RFUserImplCopyWith<$Res> implements $RFUserCopyWith<$Res> {
       String? email,
       bool? isCertified,
       String? profileImgURL,
+      String? selectedFridge,
+      String? selectedList,
       List<String>? fridges,
       List<String>? shoppingLists});
 }
@@ -172,6 +188,8 @@ class __$$RFUserImplCopyWithImpl<$Res>
     Object? email = freezed,
     Object? isCertified = freezed,
     Object? profileImgURL = freezed,
+    Object? selectedFridge = freezed,
+    Object? selectedList = freezed,
     Object? fridges = freezed,
     Object? shoppingLists = freezed,
   }) {
@@ -212,6 +230,14 @@ class __$$RFUserImplCopyWithImpl<$Res>
           ? _value.profileImgURL
           : profileImgURL // ignore: cast_nullable_to_non_nullable
               as String?,
+      selectedFridge: freezed == selectedFridge
+          ? _value.selectedFridge
+          : selectedFridge // ignore: cast_nullable_to_non_nullable
+              as String?,
+      selectedList: freezed == selectedList
+          ? _value.selectedList
+          : selectedList // ignore: cast_nullable_to_non_nullable
+              as String?,
       fridges: freezed == fridges
           ? _value._fridges
           : fridges // ignore: cast_nullable_to_non_nullable
@@ -237,6 +263,8 @@ class _$RFUserImpl implements _RFUser {
       required this.email,
       required this.isCertified,
       required this.profileImgURL,
+      required this.selectedFridge,
+      required this.selectedList,
       required final List<String>? fridges,
       required final List<String>? shoppingLists})
       : _fridges = fridges,
@@ -260,6 +288,10 @@ class _$RFUserImpl implements _RFUser {
   final bool? isCertified;
   @override
   final String? profileImgURL;
+  @override
+  final String? selectedFridge;
+  @override
+  final String? selectedList;
   final List<String>? _fridges;
   @override
   List<String>? get fridges {
@@ -282,7 +314,7 @@ class _$RFUserImpl implements _RFUser {
 
   @override
   String toString() {
-    return 'RFUser(userId: $userId, authToken: $authToken, fcmToken: $fcmToken, name: $name, firstname: $firstname, lastname: $lastname, email: $email, isCertified: $isCertified, profileImgURL: $profileImgURL, fridges: $fridges, shoppingLists: $shoppingLists)';
+    return 'RFUser(userId: $userId, authToken: $authToken, fcmToken: $fcmToken, name: $name, firstname: $firstname, lastname: $lastname, email: $email, isCertified: $isCertified, profileImgURL: $profileImgURL, selectedFridge: $selectedFridge, selectedList: $selectedList, fridges: $fridges, shoppingLists: $shoppingLists)';
   }
 
   @override
@@ -305,6 +337,10 @@ class _$RFUserImpl implements _RFUser {
                 other.isCertified == isCertified) &&
             (identical(other.profileImgURL, profileImgURL) ||
                 other.profileImgURL == profileImgURL) &&
+            (identical(other.selectedFridge, selectedFridge) ||
+                other.selectedFridge == selectedFridge) &&
+            (identical(other.selectedList, selectedList) ||
+                other.selectedList == selectedList) &&
             const DeepCollectionEquality().equals(other._fridges, _fridges) &&
             const DeepCollectionEquality()
                 .equals(other._shoppingLists, _shoppingLists));
@@ -322,6 +358,8 @@ class _$RFUserImpl implements _RFUser {
       email,
       isCertified,
       profileImgURL,
+      selectedFridge,
+      selectedList,
       const DeepCollectionEquality().hash(_fridges),
       const DeepCollectionEquality().hash(_shoppingLists));
 
@@ -345,6 +383,8 @@ abstract class _RFUser implements RFUser {
       required final String? email,
       required final bool? isCertified,
       required final String? profileImgURL,
+      required final String? selectedFridge,
+      required final String? selectedList,
       required final List<String>? fridges,
       required final List<String>? shoppingLists}) = _$RFUserImpl;
 
@@ -366,6 +406,10 @@ abstract class _RFUser implements RFUser {
   bool? get isCertified;
   @override
   String? get profileImgURL;
+  @override
+  String? get selectedFridge;
+  @override
+  String? get selectedList;
   @override
   List<String>? get fridges;
   @override

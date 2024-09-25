@@ -31,6 +31,8 @@ class UserField {
   static const String isCertified = 'isCertified';
   static const String fridges = 'fridges';
   static const String shoppingLists = 'shoppingLists';
+  static const String selectedList = 'selectedList';
+  static const String selectedFridge = 'selectedFridge';
 }
 
 class FridgeField {
