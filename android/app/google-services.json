@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "674812189821",
+    "project_id": "refridge-5c43a",
+    "storage_bucket": "refridge-5c43a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674812189821:android:7e12e4b29a6f8bd54c2514",
+        "android_client_info": {
+          "package_name": "com.refridge.refridge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674812189821-7psci58fm86dto5qt0m8i63l175rbgpi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.refridge.refridge",
+            "certificate_hash": "be0a0f962c72105b5b31cd8c7750ecf0e63bb5d8"
+          }
+        },
+        {
+          "client_id": "674812189821-1fqbla47qbqu8ut8fd60mp928e3k3qrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtJ0yzynG3NcvKY23aQx_u0dSzameKEG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674812189821-1fqbla47qbqu8ut8fd60mp928e3k3qrv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "674812189821-l9juhof84knghri2g7cb8etkhr1s1umq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.refridge.refridge"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674812189821:android:120e660c72cd45664c2514",
+        "android_client_info": {
+          "package_name": "come.refridge.refridg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674812189821-1fqbla47qbqu8ut8fd60mp928e3k3qrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtJ0yzynG3NcvKY23aQx_u0dSzameKEG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674812189821-1fqbla47qbqu8ut8fd60mp928e3k3qrv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "674812189821-l9juhof84knghri2g7cb8etkhr1s1umq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.refridge.refridge"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

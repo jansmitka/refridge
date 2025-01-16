@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:refridge/src/services/enums/fridge_sort_enum.dart';
 import 'package:refridge/src/services/enums/list_sort_enum.dart';
 import 'package:refridge/src/widgetbook/buttons/primary_text_button.dart';
 import 'package:refridge/src/widgetbook/buttons/sort_type_button.dart';

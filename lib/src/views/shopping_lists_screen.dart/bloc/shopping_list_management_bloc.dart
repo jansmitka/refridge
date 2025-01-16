@@ -4,7 +4,6 @@ import 'package:refridge/src/domain/models/grocery.dart';
 import 'package:refridge/src/domain/models/rf_user.dart';
 import 'package:refridge/src/domain/models/shopping_list.dart';
 import 'package:refridge/src/domain/repositories/lists_repository.dart';
-import 'package:refridge/src/services/enums/fridge_sort_enum.dart';
 import 'package:refridge/src/services/enums/list_sort_enum.dart';
 import 'package:refridge/src/services/enums/section_display_enum.dart';
 import 'package:refridge/src/settings/get_it_setup.dart';
