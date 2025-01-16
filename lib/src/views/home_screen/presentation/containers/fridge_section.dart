@@ -14,12 +14,11 @@ import 'package:refridge/src/views/fridge_screen/bloc/fridge_management_bloc.dar
 import 'package:refridge/src/views/bottom_sheets/presentation/botsheet_add_to_fridge_selector.dart';
 import 'package:refridge/src/views/main_screen/blocs/main_bloc.dart';
 import 'package:refridge/src/widgetbook/buttons/secondary_btn_small.dart';
-import 'package:refridge/src/widgetbook/buttons/sort_button.dart';
 import 'package:refridge/src/widgetbook/containers/empty_list.dart';
 import 'package:refridge/src/widgetbook/containers/error_container.dart';
 import 'package:refridge/src/widgetbook/containers/groceries_list.dart';
 import 'package:refridge/src/widgetbook/dialogs/modal_bottom_sheet.dart';
-import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
+import 'package:refridge/src/widgetbook/tiles/sorting_header_tile.dart';
 
 class FridgeSection extends StatefulWidget {
   const FridgeSection({
@@ -31,18 +30,24 @@ class FridgeSection extends StatefulWidget {
 }
 
 class _FridgeSectionState extends State<FridgeSection> {
-  void sortTapped(BuildContext context, FridgeSort selectedSort) async {
+  void sortTapped(BuildContext context, dynamic selectedSort) async {
     final result = await showRFBottomSheet<FridgeSort>(
       context: context,
       title: AppLocalizations.of(context)!.botsheet_sort_fridge_title,
       builder: (context) => BotSheetSortFridge(
-        sort: selectedSort,
+        sort: selectedSort as FridgeSort,
       ),
     );
     if (result != null) {
       getIt<FridgeManagementBloc>()
           .add(FridgeManagementEvent.changeSortType(result));
     }
+  }
+
+  void displayTypeTapped(SectionDisplayType type) {
+    getIt<FridgeManagementBloc>().add(
+      FridgeManagementEvent.changeDisplayType(type),
+    );
   }
 
   void onGroceryEdit(Grocery grocery) async {
@@ -105,11 +110,10 @@ class _FridgeSectionState extends State<FridgeSection> {
             height: 507,
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Column(
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         GestureDetector(
                           onTap: () => onChangeFridgeTapped(
@@ -130,18 +134,6 @@ class _FridgeSectionState extends State<FridgeSection> {
                             ],
                           ),
                         ),
-                        SortButton(
-                          icon: state.sortType.getIcon(),
-                          isAsc: state.sortType.isAscending(),
-                          onTap: () => sortTapped(
-                            context,
-                            state.sortType,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
                         SecondaryBtnSmall(
                           onTap: () async {
                             await showRFBottomSheet<bool>(
@@ -153,49 +145,13 @@ class _FridgeSectionState extends State<FridgeSection> {
                           },
                           icon: Icons.add,
                         ),
-                        RFPadding.smallVertical(
-                          child: Row(
-                            children: [
-                              GestureDetector(
-                                onTap: () => getIt<FridgeManagementBloc>().add(
-                                  const FridgeManagementEvent.changeDisplayType(
-                                      SectionDisplayType.grid),
-                                ),
-                                child: SizedBox(
-                                  width: 24,
-                                  height: 24,
-                                  child: Icon(
-                                    Icons.grid_view_outlined,
-                                    size: 20,
-                                    color: state.displayType ==
-                                            SectionDisplayType.grid
-                                        ? RFColors.primaryColor
-                                        : RFColors.textPrimary,
-                                  ),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () => getIt<FridgeManagementBloc>().add(
-                                  const FridgeManagementEvent.changeDisplayType(
-                                      SectionDisplayType.list),
-                                ),
-                                child: SizedBox(
-                                  width: 24,
-                                  height: 24,
-                                  child: Icon(
-                                    Icons.list_rounded,
-                                    size: 20,
-                                    color: state.displayType ==
-                                            SectionDisplayType.list
-                                        ? RFColors.primaryColor
-                                        : RFColors.textPrimary,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
                       ],
+                    ),
+                    SortingHeaderTile(
+                      displayType: state.displayType,
+                      sortType: state.sortType,
+                      onSortTapped: sortTapped,
+                      onDisplayTypeTapped: displayTypeTapped,
                     ),
                   ],
                 ),
@@ -222,7 +178,7 @@ class _FridgeSectionState extends State<FridgeSection> {
                     onEdit: onGroceryEdit,
                     onAddToList: onGroceryAddToList,
                     onDelete: onGroceryDelete,
-                    useMaxItems: true,
+                    useMaxItems: false,
                     neverScrool: true,
                   ),
                 ),

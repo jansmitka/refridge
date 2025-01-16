@@ -5,11 +5,17 @@ class PrimaryBtnSmall extends StatelessWidget {
   final VoidCallback onTap;
   final String? label;
   final IconData? icon;
+  final double? width;
+  final double? height;
+  final bool isSecondary;
   const PrimaryBtnSmall({
     super.key,
     required this.onTap,
     this.label,
     this.icon,
+    this.width,
+    this.height,
+    this.isSecondary = false,
   });
 
   @override
@@ -18,10 +24,12 @@ class PrimaryBtnSmall extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-        constraints: const BoxConstraints(minWidth: 50),
+        constraints: width == null ? const BoxConstraints(minWidth: 50) : null,
+        width: width,
+        height: height,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          color: RFColors.primaryColor,
+          color: isSecondary ? RFColors.secondaryColor : RFColors.primaryColor,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

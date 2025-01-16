@@ -10,15 +10,15 @@ import 'package:refridge/src/widgetbook/paddings/custom_paddings.dart';
 class GroceryGridTile extends StatefulWidget {
   final Grocery grocery;
   final Function(Grocery) onEdit;
-  final Function(Grocery) onAddToList;
+  final Function(Grocery)? onAddToList;
   final Function(Grocery) onDelete;
 
   const GroceryGridTile({
     super.key,
     required this.grocery,
     required this.onEdit,
-    required this.onAddToList,
     required this.onDelete,
+    this.onAddToList,
   });
 
   @override
@@ -79,21 +79,22 @@ class _GroceryGridTileState extends State<GroceryGridTile> {
               ),
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              _togglePanel();
-              widget.onAddToList(widget.grocery);
-            },
-            child: const SizedBox(
-              width: 35,
-              height: 35,
-              child: Icon(
-                Icons.shopping_cart_checkout_outlined,
-                color: RFColors.generalBg,
-                size: 20,
+          if (widget.onAddToList != null)
+            GestureDetector(
+              onTap: () {
+                _togglePanel();
+                widget.onAddToList!(widget.grocery);
+              },
+              child: const SizedBox(
+                width: 35,
+                height: 35,
+                child: Icon(
+                  Icons.shopping_cart_checkout_outlined,
+                  color: RFColors.generalBg,
+                  size: 20,
+                ),
               ),
             ),
-          ),
           GestureDetector(
             onTap: () {
               _togglePanel();

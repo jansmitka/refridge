@@ -9,4 +9,5 @@ class Routes {
   static const String forgottenPasswordScreen = 'forgottenPasswordScreen';
   static const String requiredUserInfoScreen = 'requiredUserInfoScreen';
   static const String addToFridgeScreen = 'addToFridgeScreen';
+  static const String addToListScreen = 'addToListScreen';
 }

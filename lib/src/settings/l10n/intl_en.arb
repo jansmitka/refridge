@@ -74,6 +74,7 @@
     "home_screen_title" : "Hello {name}",
     "home_screen_fridge_section_title" : "{name}'s Fridge",
     "home_screen_fridge_section_no_items_label" : "No items in the Fridge yet!",
+    "home_screen_list_section_no_items_label" : "No items in the Shopping list yet!",
     "home_screen_fridge_section_no_items_btn" : "Add groceries",
 
     "discover_screen_title" : "Lets start Cooking",
@@ -97,6 +98,15 @@
     "add_to_fridge_screen_no_items_desc" : "Please, select items to add!",
     "add_to_fridge_screen_success_desc" : "Items were added to your Fridge!",
 
+    "add_to_list_screen_title" : "Add to Shopping list",
+    "add_to_list_screen_section_title" : "What to add",
+    "add_to_list_screen_btn" : "Add Items",
+    "add_to_list_screen_nothing_in_fridge" : "No items selected yet",
+    "add_to_list_screen_no_results" : "No items found",
+    "add_to_list_screen_no_items_title" : "No items to add",
+    "add_to_list_screen_no_items_desc" : "Please, select items to add!",
+    "add_to_list_screen_success_desc" : "Items were added to your Shopping list!",
+
     "add_item_to_fridge_bottom_title" : "Add Item",
     "add_item_to_fridge_bottom_expiration" : "Expiration date",
     "add_item_to_fridge_bottom_add" : "Add",
@@ -109,6 +119,9 @@
 
     "botsheet_sort_fridge_title" : "Sort Fridge",
     "botsheet_sort_fridge_btn" : "Continue",
+
+    "botsheet_sort_list_title" : "Sort Shopping list",
+    "botsheet_sort_list_btn" : "Continue",
 
     "botsheet_change_fridge_title" : "Your Fridges",
     "botsheet_change_fridge_btn" : "Continue",

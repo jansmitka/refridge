@@ -7,7 +7,7 @@ class GroceriesList extends StatefulWidget {
   final List<Grocery> groceries;
   final SectionDisplayType displayType;
   final Function(Grocery) onEdit;
-  final Function(Grocery) onAddToList;
+  final Function(Grocery)? onAddToList;
   final Function(Grocery) onDelete;
   final bool useMaxItems;
   final bool neverScrool;
@@ -16,8 +16,8 @@ class GroceriesList extends StatefulWidget {
     required this.groceries,
     required this.displayType,
     required this.onEdit,
-    required this.onAddToList,
     required this.onDelete,
+    this.onAddToList,
     this.useMaxItems = false,
     this.neverScrool = false,
   });
