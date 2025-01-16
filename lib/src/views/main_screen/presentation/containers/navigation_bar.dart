@@ -12,12 +12,20 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: RFColors.greySecondary,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(25),
           topRight: Radius.circular(25),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.4), // Shadow color
+            spreadRadius: 2, // Spread of the shadow
+            blurRadius: 10, // Blur effect
+            offset: const Offset(0, 4), // Shadow position (x, y)
+          ),
+        ],
       ),
       child: SafeArea(
         child: IntrinsicHeight(

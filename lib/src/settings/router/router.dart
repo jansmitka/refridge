@@ -2,7 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:refridge/src/domain/models/fridge.dart';
 import 'package:refridge/src/domain/models/rf_user.dart';
+import 'package:refridge/src/domain/models/shopping_list.dart';
 import 'package:refridge/src/views/add_to_fridge_screen/presentation/add_to_fridge_screen.dart';
+import 'package:refridge/src/views/add_to_list_screen/presentation/add_to_list_screen.dart';
 import 'package:refridge/src/views/auth_screens/presentation/auth_screens_wrapper.dart';
 import 'package:refridge/src/views/auth_screens/presentation/sign_in_screen.dart';
 import 'package:refridge/src/views/auth_screens/presentation/sign_up_screen.dart';
@@ -42,6 +44,13 @@ Route<Widget> generateRoutes(RouteSettings settings) {
         user: args['user'] as RFUser,
         selectedFridge: args['selectedFridge'] as Fridge,
         fridges: args['fridges'] as List<Fridge>,
+      );
+      break;
+    case Routes.addToListScreen:
+      view = AddToListScreen(
+        user: args['user'] as RFUser,
+        selectedList: args['selectedList'] as ShoppingList,
+        lists: args['lists'] as List<ShoppingList>,
       );
       break;
 

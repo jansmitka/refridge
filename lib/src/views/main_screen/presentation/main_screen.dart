@@ -11,6 +11,7 @@ import 'package:refridge/src/views/home_screen/presentation/home_screen.dart';
 import 'package:refridge/src/views/main_screen/blocs/main_bloc.dart';
 import 'package:refridge/src/views/main_screen/blocs/user_bloc.dart';
 import 'package:refridge/src/views/main_screen/presentation/containers/navigation_bar.dart';
+import 'package:refridge/src/views/shopping_lists_screen.dart/bloc/shopping_list_management_bloc.dart';
 import 'package:refridge/src/views/shopping_lists_screen.dart/presentation/shopping_lists_screen.dart';
 import 'package:refridge/src/views/user_required_info/presentation/user_required_info.dart';
 
@@ -80,6 +81,14 @@ class _MainScreenState extends State<MainScreen> {
                   value: getIt<FridgeManagementBloc>()
                     ..add(
                       FridgeManagementEvent.init(
+                        state.user!,
+                      ),
+                    ),
+                ),
+                BlocProvider.value(
+                  value: getIt<ShoppingListManagementBloc>()
+                    ..add(
+                      ShoppingListManagementEvent.init(
                         state.user!,
                       ),
                     ),

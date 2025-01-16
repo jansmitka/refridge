@@ -4,6 +4,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:refridge/src/domain/repositories/fridge_repository.dart';
+import 'package:refridge/src/domain/repositories/lists_repository.dart';
 import 'package:refridge/src/domain/repositories/storage_repository.dart';
 import 'package:refridge/src/domain/repositories/user_auth_repository.dart';
 import 'package:refridge/src/domain/repositories/user_reporitory.dart';
@@ -14,10 +15,12 @@ import 'package:refridge/src/services/snackbar/blocs/snackbar_bloc.dart';
 import 'package:refridge/src/settings/navigation_service.dart';
 import 'package:refridge/src/views/account_screen/bloc/account_bloc.dart';
 import 'package:refridge/src/views/add_to_fridge_screen/bloc/add_to_fridge_bloc.dart';
+import 'package:refridge/src/views/add_to_list_screen/bloc/add_to_list_bloc.dart';
 import 'package:refridge/src/views/auth_screens/blocs/auth_bloc.dart';
 import 'package:refridge/src/views/fridge_screen/bloc/fridge_management_bloc.dart';
 import 'package:refridge/src/views/main_screen/blocs/main_bloc.dart';
 import 'package:refridge/src/views/main_screen/blocs/user_bloc.dart';
+import 'package:refridge/src/views/shopping_lists_screen.dart/bloc/shopping_list_management_bloc.dart';
 import 'package:refridge/src/views/user_auth_wrapper/application/bloc/user_auth_bloc.dart';
 import 'package:refridge/src/views/user_required_info/bloc/required_user_info_bloc.dart';
 
@@ -43,14 +46,18 @@ Future configureGetIt() async {
   getIt.registerLazySingleton<UserBloc>(() => UserBloc());
   getIt.registerLazySingleton<AccountBloc>(() => AccountBloc());
   getIt.registerLazySingleton<AddToFridgeBloc>(() => AddToFridgeBloc());
+  getIt.registerLazySingleton<AddToListBloc>(() => AddToListBloc());
   getIt.registerLazySingleton<FridgeManagementBloc>(
       () => FridgeManagementBloc());
+  getIt.registerLazySingleton<ShoppingListManagementBloc>(
+      () => ShoppingListManagementBloc());
   getIt.registerLazySingleton<RequiredUserInfoBloc>(
       () => RequiredUserInfoBloc());
 
   getIt.registerLazySingleton<UserAuthRepository>(() => UserAuthRepository());
   getIt.registerLazySingleton<UserRepository>(() => UserRepository());
   getIt.registerLazySingleton<FridgeRepository>(() => FridgeRepository());
+  getIt.registerLazySingleton<ListsRepository>(() => ListsRepository());
   getIt.registerLazySingleton<FirebaseStorageRepository>(
       () => FirebaseStorageRepository());
 }

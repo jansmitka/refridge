@@ -100,10 +100,15 @@ class CollectionRef {
       _firestore.collection(Collection.fridges);
   CollectionReference<Map<String, dynamic>> get shoppingList =>
       _firestore.collection(Collection.shoppingLists);
-  CollectionReference<Map<String, dynamic>> groceries(String fridgeId) =>
+  CollectionReference<Map<String, dynamic>> fridgeGroceries(String fridgeId) =>
       _firestore
           .collection(Collection.fridges)
           .doc(fridgeId)
+          .collection(Collection.groceries);
+  CollectionReference<Map<String, dynamic>> listGroceries(String listId) =>
+      _firestore
+          .collection(Collection.shoppingLists)
+          .doc(listId)
           .collection(Collection.groceries);
 }
 

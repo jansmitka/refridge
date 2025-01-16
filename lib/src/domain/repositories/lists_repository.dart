@@ -1,41 +1,41 @@
 import 'package:refridge/src/domain/models/firebase_collections.dart';
-import 'package:refridge/src/domain/models/fridge.dart';
 import 'package:refridge/src/domain/models/grocery.dart';
 import 'package:refridge/src/domain/models/grocery_template.dart';
+import 'package:refridge/src/domain/models/shopping_list.dart';
 import 'package:refridge/src/services/helpers/result.dart';
 
-class FridgeRepository {
-  Future<Result<Fridge>> getFridgeData(String fridgeId) async {
+class ListsRepository {
+  Future<Result<ShoppingList>> getListData(String listId) async {
     try {
-      final result = await documentRef.fridge(fridgeId).get();
-      return Result.success(Fridge.fromDocument(result));
+      final result = await documentRef.list(listId).get();
+      return Result.success(ShoppingList.fromDocument(result));
     } catch (e) {
       return Result.error(e.toString());
     }
   }
 
-  Future<Result<List<Fridge>>> getFridgesData(List<String> ids) async {
+  Future<Result<List<ShoppingList>>> getListsData(List<String> ids) async {
     try {
-      List<Fridge> fridges = [];
+      List<ShoppingList> lists = [];
       for (var id in ids) {
-        final result = await documentRef.fridge(id).get();
-        fridges.add(Fridge.fromDocument(result));
+        final result = await documentRef.list(id).get();
+        lists.add(ShoppingList.fromDocument(result));
       }
-      return Result.success(fridges);
+      return Result.success(lists);
     } catch (e) {
       return Result.error(e.toString());
     }
   }
 
   Stream<List<Grocery>> streamGroceries(String fridgeId) {
-    return collectionRef.fridgeGroceries(fridgeId).snapshots().map((snapshot) {
+    return collectionRef.listGroceries(fridgeId).snapshots().map((snapshot) {
       return snapshot.docs.map((doc) => Grocery.fromDocument(doc)).toList();
     });
   }
 
-  Future<Result<bool>> editGrocery(String fridgeId, Grocery grocery) async {
+  Future<Result<bool>> editGrocery(String listId, Grocery grocery) async {
     try {
-      final docRef = collectionRef.fridgeGroceries(fridgeId).doc(grocery.id);
+      final docRef = collectionRef.listGroceries(listId).doc(grocery.id);
       await docRef.update({
         GroceryField.amount: grocery.amount,
         GroceryField.expirationDate: grocery.expirationDate,
@@ -52,11 +52,11 @@ class FridgeRepository {
     }
   }
 
-  Future<Result<bool>> changeFridge(String fridgeId, String userId) async {
+  Future<Result<bool>> changeList(String listId, String userId) async {
     try {
       final docRef = documentRef.user(userId);
       await docRef.update({
-        UserField.selectedFridge: fridgeId,
+        UserField.selectedList: listId,
       });
       return Result.success(true);
     } catch (e) {
@@ -64,9 +64,9 @@ class FridgeRepository {
     }
   }
 
-  Future<Result<bool>> deleteGrocery(String fridgeId, Grocery grocery) async {
+  Future<Result<bool>> deleteGrocery(String listId, Grocery grocery) async {
     try {
-      final docRef = collectionRef.fridgeGroceries(fridgeId).doc(grocery.id);
+      final docRef = collectionRef.listGroceries(listId).doc(grocery.id);
       await docRef.delete();
       return Result.success(true);
     } catch (e) {
@@ -74,10 +74,10 @@ class FridgeRepository {
     }
   }
 
-  Future<Result<bool>> postGroceriesToFridge(
-      String fridgeId, List<Grocery> groceries) async {
+  Future<Result<bool>> postGroceriesToList(
+      String listId, List<Grocery> groceries) async {
     try {
-      final groceryRef = collectionRef.fridgeGroceries(fridgeId);
+      final groceryRef = collectionRef.listGroceries(listId);
 
       for (Grocery grocery in groceries) {
         final ref = groceryRef.doc();
